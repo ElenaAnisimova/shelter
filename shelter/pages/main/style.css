@@ -135,7 +135,7 @@ a {
   margin-bottom: 243px;
 }
 
-#h1 {
+.not-only-heading {
   font-size: 44px;
   font-family: Georgia;
   font-weight: 400;
@@ -151,7 +151,6 @@ a {
 
 
 .button_make-friend {
-
   width: 207px;
   height: 52px;
 }
@@ -168,7 +167,72 @@ a {
   letter-spacing: 1.2px;
 }
 
+/* SECTION ABOUT  */
+.section-about {
+  background-color: white;
+}
 
+.about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 16.8%;
+  margin-right: 16.8%;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  gap: 9.375%;
+
+}
+
+.about-text-container {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  width: 50.5%;
+}
+
+.about-section-heading {
+  font-family: Georgia;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+  text-align: left;
+
+}
+
+.about-section-img {
+  height: 408px;
+  background-image: url(../../assets/about-pets.png);
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  /* width: 35.3%; */
+  min-width: 300px;
+
+}
+
+.about-paragraph.first,
+.about-paragraph.second {
+  margin-top: 25px;
+
+}
+
+.about-paragraph {
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+
+
+
+@media screen and (max-width: 1279px) {
+  .about-container {
+    margin-left: 16vw;
+    margin-right: 16vw;
+  }
+}
 
 @media screen and (max-width: 1150px) {
   .not-only-container {
@@ -185,6 +249,27 @@ a {
   }
 }
 
+@media screen and (max-width: 976px) {
+  .about-container {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    /* min-width: 650px; */
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .about-section-heading {
+
+    min-width: 302px;
+  }
+}
+
+@media screen and (max-width: 785px) {
+  .paragraph-space {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .container-main {
     max-width: 768px;
@@ -195,7 +280,6 @@ a {
   }
 
   .header-container {
-
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -210,13 +294,34 @@ a {
     margin-right: auto;
     width: 207px;
   }
+
+  /* SECTION ABOUT  */
+
+
+  .about-container {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 22vw;
+    margin-right: 22vw;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    gap: 80px;
+  }
+
+  .about-text-container {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .about-section-img {
+    margin: auto;
+    width: 69.7%;
+    min-width: 300px;
+    background-size: contain;
+  }
+
 }
 
-@media screen and (max-width: 785px) {
-  .paragraph-space {
-    display: none;
-  }
-}
 
 @media screen and (max-width: 767px) {
   .nav.top {
@@ -232,7 +337,7 @@ a {
     width: 90%;
   }
 
-  #h1 {
+  .not-only-heading {
     font-size: 30px;
     line-height: normal;
   }
@@ -254,6 +359,20 @@ a {
 
   .not-only-container {
     margin-bottom: calc(100vw);
+  }
+.about-container {
+  margin-left: 15vw;
+  margin-right: 15vw;
+}
+  .about-section-heading {
+    font-size: 25px;
+    min-width: auto;
+    text-align: center;
+  }
+
+  .about-section-img {
+    width: calc(47vw);
+    min-width: 260px;
   }
 }
 
@@ -279,7 +398,7 @@ a {
     margin-right: 10px;
   }
 
-  #h1 {
+  .mobile-heading {
     font-size: 25px;
     text-align: center;
     line-height: 32.5px;
@@ -290,4 +409,24 @@ a {
     text-align: center;
   }
 
+  /* SECTION ABOUT  */
+  .about-container {
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-top: 42px;
+    gap: 40px;
+  }
+
+  .about-paragraph {
+    text-align: justify;
+  }
+
+  .about-paragraph.second {
+    margin-top: 21px;
+  }
+
+  .about-section-img {
+    height: 353.6px;
+    width: 96.3%;
+  }
 }
