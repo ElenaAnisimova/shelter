@@ -225,6 +225,11 @@ a {
   text-align: left;
 }
 
+/* SECTION OUR FRIENDS/SLIDER */
+.arrow-left {
+  width: 52px;
+  height: 52px;
+}
 
 
 @media screen and (max-width: 1279px) {
@@ -360,10 +365,12 @@ a {
   .not-only-container {
     margin-bottom: calc(100vw);
   }
-.about-container {
-  margin-left: 15vw;
-  margin-right: 15vw;
-}
+
+  .about-container {
+    margin-left: 15vw;
+    margin-right: 15vw;
+  }
+
   .about-section-heading {
     font-size: 25px;
     min-width: auto;
