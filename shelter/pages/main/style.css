@@ -309,7 +309,8 @@ a {
 }
 
 .paragraph-20,
-.help-item-text {
+.help-item-text,
+.card-number {
   font-family: Georgia;
   font-size: 20px;
   font-weight: 400;
@@ -364,7 +365,7 @@ a {
   margin-left: 127px;
   margin-right: 127px;
   display: flex;
-  row-gap:56px;
+  row-gap: 56px;
   column-gap: 119px;
   flex-wrap: wrap;
 }
@@ -381,12 +382,70 @@ a {
   align-self: center;
 
 }
+
 .help-item.vitamins {
   margin-left: 84px;
 }
 
+/* SECTION DONATION  */
 
+.section-donation {
+  background-color: #F6F6F6;
+  color: #545454;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
 
+.section-donation-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.donation-container {
+  margin-left: 182px;
+  margin-right: 182px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.donation-puppy-container {
+  background-image: url(../../assets/donation-dog.png);
+  width: 505px;
+  min-width: 505px;
+  height: 261px;
+  margin-top: 11px;
+}
+
+.paragraph-bank-name {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 17px;
+  letter-spacing: 0.06em;
+
+}
+
+.card-number-container {
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  gap: 15px;
+  background-color: #F1CDB3;
+  padding: 10px 15px;
+  border-radius: 9px;
+  margin-bottom: 20px;
+}
+
+.paragraph-card-legal {
+  font-family: Arial;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  color: #B2B2B2;
+}
 
 
 
