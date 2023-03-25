@@ -242,12 +242,7 @@ a {
   margin: 0 auto;
 }
 
-.our-friends-container {
-  margin-left: 40px;
-  margin-right: 40px;
-
-}
-
+/* ИСПРАВИТЬ РАЗМЕР ШРИФТА ЩОБ НЕ ПРЫШАЛ */
 .our-friends-heading {
   margin-bottom: 60px;
   text-align: center;
@@ -259,7 +254,7 @@ a {
   gap: 53px;
   margin-bottom: 60px;
 }
-/* исправить маржины у .our-friends-container */
+
 .slider-images-container {
   display: flex;
   flex-direction: row;
@@ -313,7 +308,8 @@ a {
   margin-bottom: 30px;
 }
 
-.paragraph-20 {
+.paragraph-20,
+.help-item-text {
   font-family: Georgia;
   font-size: 20px;
   font-weight: 400;
@@ -344,9 +340,52 @@ a {
   width: 261px;
   height: 52px;
   background-color: #F1CDB3;
+}
 
+/* SECTION HELP  */
+
+.section-help {
+  background: #fff;
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.section-help-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-help-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.help-container {
+  margin-left: 127px;
+  margin-right: 127px;
+  display: flex;
+  row-gap:56px;
+  column-gap: 119px;
+  flex-wrap: wrap;
+}
+
+.help-item {
+  height: 113px;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.help-item img {
+  align-self: center;
 
 }
+.help-item.vitamins {
+  margin-left: 84px;
+}
+
+
 
 
 
@@ -356,15 +395,6 @@ a {
     margin-left: 16vw;
     margin-right: 16vw;
   }
-
-  .our-friends-container {
-    /* padding-left: 17.2vw;
-    padding-right: 17.2vw; */
-    margin-left: 17.2vw;
-    margin-right: 17.2vw;
-  }
-
-
 
   /* SLIDER  */
 
