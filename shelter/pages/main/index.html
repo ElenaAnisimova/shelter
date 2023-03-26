@@ -6,55 +6,61 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="../../assets/cat-silhouette.svg">
   <title>Shelter</title>
 </head>
 
 <body>
   <!-- HEADER -->
-  <div class="background-brown">
-    <div class="container-main">
-      <header class="header">
-        <div class="header-container">
-          <div class="logo-container">
-            <h3 class="logo-title">
-              Cozy House
-            </h3>
-            <span class="logo-text">Shelter for pets in Boston</span>
-          </div>
-          <nav class="nav top">
-            <ul class="nav-list">
-              <li class="nav-item highlight-text"><a href="#help" class="nav-link highlight-text">About the
-                  shelter</a>
-              </li>
-              <li class="nav-item"><a
-                  href="https://rolling-scopes-school.github.io/elenaanisimova-JSFE2023Q1/shelter/pages/pets/"
-                  class="nav-link">Our pets</a></li>
-              <li class="nav-item"><a href="#help" class="nav-link">Help the shelter</a></li>
-              <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
-            </ul>
-          </nav>
+  <header class="header">
+    <div class="header-wrapper wrapper">
+      <div class="header-container">
+        <div class="logo-container">
+          <h3 class="logo-title">
+            Cozy House
+          </h3>
+          <span class="logo-text">Shelter for pets in Boston</span>
         </div>
-      </header>
-      <main>
-        <!--  SECTION NOT ONLY-->
-        <section class="section-not-only">
-          <div class="not-only-container">
-            <h1 id="h1" class="not-only-heading mobile-heading">Not only people<br> need a house</h1>
-            <div class="paragraph">We offer to give a chance to a little and nice puppy with an extremely<br
-                class="paragraph-space"> wide and open
-              heart.
-              He or she will love you more than anybody else<br class="paragraph-space"> in the world, you will see!
-            </div>
-            <form class="buttons form_make-friend">
+        <nav class="nav top">
+          <ul class="nav-list">
+            <li class="nav-item nav-link highlight-text">
+              About the shelter
+            </li>
+            <li class="nav-item"><a
+                href="https://rolling-scopes-school.github.io/elenaanisimova-JSFE2023Q1/shelter/pages/pets/"
+                class="nav-link">Our pets</a></li>
+            <li class="nav-item"><a href="#help" class="nav-link">Help the shelter</a></li>
+            <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!-- MAIN  -->
+  <main>
+    <!--  SECTION NOT ONLY-->
+    <section class="section-not-only">
+      <div class="section-not-only-wrapper wrapper">
+        <div class="not-only-container">
+          <h1 id="h1" class="not-only-heading mobile-heading">Not only people<br> need a house</h1>
+          <div class="paragraph">We offer to give a chance to a little and nice puppy with an extremely<br
+              class="paragraph-space"> wide and open
+            heart.
+            He or she will love you more than anybody else<br class="paragraph-space"> in the world, you will see!
+          </div>
+          <form class="buttons form_make-friend">
+            <a href="#our-friends">
               <button type="button" class="button_make-friend button">
                 <span class="button-text">
                   Make a friend
                 </span>
               </button>
-            </form>
-          </div>
-        </section>
-    </div>
+            </a>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <!--  SECTION ABOUT-->
     <section class="section-about">
       <div class="about-section-wrapper">
@@ -77,7 +83,7 @@
       </div>
     </section>
     <!--  SECTION OUR FRIENDS-->
-    <section class="section-our-friends">
+    <section class="section-our-friends" id="our-friends">
       <div class="section-our-friends-wrapper">
         <div class="our-friends-container">
           <h3 class="our-friends-heading section-heading mobile-heading">
@@ -134,16 +140,18 @@
           </form>
           <form class="buttons form_get-know">
             <button type="button" class="button_get-know button">
-              <span class="button-text">
-                Get to know the rest
-              </span>
+              <a href="https://rolling-scopes-school.github.io/elenaanisimova-JSFE2023Q1/shelter/pages/pets/">
+                <span class="button-text">
+                  Get to know the rest
+                </span>
+              </a>
             </button>
           </form>
         </div>
       </div>
     </section>
     <!--  SECTION HELP-->
-    <section class="section-help">
+    <section class="section-help" id="help">
       <h3 class="section-help-heading section-heading mobile-heading">How you can help <br>
         our shelter</h3>
       <div class="section-help-wrapper">
@@ -199,7 +207,9 @@
             <div class="paragraph-bank-name">Name of the bank / Type of bank account</div>
             <div class="card-number-container">
               <img src="../../assets/credit-card.svg" alt="credit-card" class="card-image">
-              <div class="card-number">8380 2880 8028 8791 7435</div>
+              <a href="">
+                <div class="card-number">8380 2880 8028 8791 7435</div>
+              </a>
             </div>
             <div class="paragraph-card-legal">Legal information and lorem ipsum dolor sit amet, consectetur adipiscing
               elit. Maecenas a ipsum at libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et
@@ -208,40 +218,61 @@
         </div>
       </div>
     </section>
-    </main>
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-wrapper">
-        <div class="footer-container">
-          <div class="footer-text-container">
-
-            <div class="contacts-container">
-              <div class="footer-heading section-heading mobile-heading contacts">For questions <br> and suggestions</div>
-              <div class="contact-container email">
-                <img src="../../assets/mail.png" alt="email-icon" class="email-img">
-                <span class="email contact">email@shelter.com</span>
-              </div>
-              <div class="contact-container adresses">
-                <img src="../../assets/phone.png" alt="phone-icon" class="phone-img">
-                <span class="phone contact">+13 674 567 75 54</span>
-              </div>
+  </main>
+  <!-- FOOTER -->
+  <footer class="footer" id="contacts">
+    <div class="footer-wrapper">
+      <div class="footer-container">
+        <div class="footer-text-container">
+          <div class="contacts-container">
+            <div class="footer-heading section-heading mobile-heading contacts">For questions <br> and suggestions
             </div>
-            <div class="adresses-container">
-              <div class="footer-heading section-heading mobile-heading adresses">We are waiting <br> for your visit</div>
-              <div class="contact-container">
-                <img src="../../assets/pin.png" alt="pin-icon" class="pin-img first">
-                <span class="location contact">1 Central Street, Boston (entrance from the store)</span>
-              </div>
-              <div class="contact-container">
-                <img src="../../assets/pin.png" alt="pin-icon" class="pin-img second">
-                <span class="location contact">18 South Park, London </span>
-              </div>
+            <div class="contact-container email">
+              <a href="mailto:email@shelter.com">
+                <img src="../../assets/mail.png" alt="email-icon" class="email-img">
+              </a>
+              <a href="mailto:email@shelter.com">
+                <span class="email contact">email@shelter.com</span>
+              </a>
+            </div>
+            <div class="contact-container">
+              <a href="tel:+13 674 567 75 54">
+                <img src="../../assets/phone.png" alt="phone-icon" class="phone-img">
+              </a>
+              <a href="tel:+13 674 567 75 54">
+                <span class="phone contact">+13 674 567 75 54</span></a>
             </div>
           </div>
-          <div class="footer-image"></div>
+          <div class="adresses-container">
+            <div class="footer-heading section-heading mobile-heading adresses">We are waiting <br> for your visit
+            </div>
+            <div class="contact-container boston">
+              <a href="https://www.google.ru/maps/d/viewer?mid=1NryYrCuIfABGvvx9IG0QaoWJQ10&hl=ru" target="_blank"
+                rel="noopener noreferrer">
+                <img src="../../assets/pin.png" alt="pin-icon" class="pin-img first">
+              </a>
+              <a href="https://www.google.ru/maps/d/viewer?mid=1NryYrCuIfABGvvx9IG0QaoWJQ10&hl=ru" target="_blank"
+                rel="noopener noreferrer">
+                <span class="location contact">1 Central Street, Boston (entrance from the store)</span>
+              </a>
+            </div>
+            <div class="contact-container london">
+              <a href="https://www.google.ru/maps/d/viewer?mid=1M95YwmiNwhFmFcnORhLzRjByabI&hl=ru" target="_blank"
+                rel="noopener noreferrer">
+                <img src="../../assets/pin.png" alt="pin-icon" class="pin-img second">
+              </a>
+
+              <a href="https://www.google.ru/maps/d/viewer?mid=1M95YwmiNwhFmFcnORhLzRjByabI&hl=ru" target="_blank"
+                rel="noopener noreferrer">
+                <span class="location contact">18 South Park, London </span>
+              </a>
+            </div>
+          </div>
         </div>
+        <div class="footer-image"></div>
       </div>
-  </div>
+    </div>
+    </div>
   </footer>
   </div>
 </body>
