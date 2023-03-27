@@ -106,6 +106,26 @@ a {
   color: #292929;
 }
 
+.logo-title:hover {
+  color: #292929;
+  transition: 0.3s;
+}
+
+.logo-text:hover {
+  color: black;
+  transition: 0.3s;
+}
+
+.logo-title:active {
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.logo-text:active {
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
 .nav-list {
   display: flex;
   justify-content: center;
@@ -139,8 +159,8 @@ a {
 .highlight-text.nav-link {
   color: #545454;
   border-bottom: 3px solid #F1CDB3;
-  cursor: pointer;
- }
+  cursor: auto;
+}
 
 
 .button:hover,
@@ -176,6 +196,7 @@ button:active {
   max-width: 1280px;
   margin: 0 auto;
 }
+
 .section-heading {
   font-family: Georgia;
   font-size: 35px;
@@ -203,7 +224,8 @@ button:active {
 .slider-images-container {
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  column-gap: 40px;
+  row-gap: 30px;
   flex-wrap: wrap;
 }
 
@@ -214,9 +236,42 @@ button:active {
   cursor: pointer;
 }
 
+.slider-card:hover {
+  background-color: white;
+}
+
+.pagination-buttons-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.page-number.button {
+  background-color: #F1CDB3;
+}
+
+.page-number.button:hover {
+  background-color: #F1CDB3;
+}
+
+.next-page,
+.double-next-page {
+  background-color: #F6F6F6;
+  border: 2px solid #F1CDB3;
+}
+
 .arrow_form {
   display: flex;
   align-items: center;
+}
+
+.button-text {
+  color: #292929;
+  font-size: 17px;
+  font-family: Georgia;
+  letter-spacing: 1.2px;
 }
 
 .arrow-left.button,
@@ -229,6 +284,40 @@ button:active {
 
 .arrow-img.arrow-right {
   transform: rotate(180deg);
+}
+
+.round-button {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.round-button:hover {
+  background-color: #FDDCC4;
+}
+
+.round-button:active {
+  background-color: #F1CDB3;
+}
+
+.pagination-button span {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.back-button span {
+  color: #CDCDCD;
+}
+
+.back-button:hover {
+  background-color: #F6F6F6;
+}
+
+.round-button:disabled {
+  border: 2px solid #CDCDCD;
+  cursor: auto;
 }
 
 /* SLIDER CARDS */
@@ -250,18 +339,23 @@ button:active {
 .woody.pet-img {
   background: url(../../assets/pets-woody.png);
 }
+
 .sophia.pet-img {
   background: url(../../assets/pets-sophia.png);
 }
+
 .timmy.pet-img {
   background: url(../../assets/pets-timmy.png);
 }
+
 .charly.pet-img {
   background: url(../../assets/pets-charly.png);
 }
+
 .scarlett.pet-img {
   background: url(../../assets/pets-scarlet.png);
 }
+
 .freddie.pet-img {
   background: url(../../assets/pets-freddie.png);
 }
@@ -304,6 +398,9 @@ button:active {
   background-color: #FAFAFA;
   border: 2px solid #F1CDB3;
 }
+.button_learn-more:active  {
+  background-color:#f8e6da !important;
+} 
 
 .slider-card:hover button {
   background-color: #FDDCC4;
@@ -325,6 +422,14 @@ button:active {
 /* FOOTER  */
 .footer {
   background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
+
+}
+
+.footer-gradient {
+  width: 100%;
+  background-image: url(../../assets/noise_transparent.png);
+  height: 100%;
+
   padding-top: 40px;
 }
 
