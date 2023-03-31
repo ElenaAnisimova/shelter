@@ -48,20 +48,9 @@ a {
   cursor: pointer;
 }
 
-.header-wrapper.wrapper {
+.wrapper {
   max-width: 1280px;
   margin: 0 auto;
-}
-
-/* .section-not-only {
-  /* background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%); */
-/* background-position: bottom right; */
-
-
-.section-not-only-wrapper.wrapper {
-  max-width: 1280px;
-  margin: 0 auto;
-
 }
 
 .background-container {
@@ -71,7 +60,7 @@ a {
 }
 
 .header {
-  padding-top: 60px;
+  padding-top: 30px;
 }
 
 .header-container {
@@ -150,18 +139,17 @@ a {
 }
 
 .not-only-container {
-
-  /* margin-bottom: 243px; */
   display: flex;
   flex-direction: row;
   gap: 42px;
+  gap: 3.5%;
   margin-left: 40px;
   margin-right: 40px;
   justify-content: flex-start;
 }
 
 .not-only-text-container {
-  margin-top: 223px;
+  margin-top: 254px;
   width: fit-content;
 }
 
@@ -169,7 +157,7 @@ a {
   background: url(../../assets/start-screen-puppy.png);
   width: 698px;
   height: 728px;
-  margin-top: 61px;
+  margin-top: 91px;
 }
 
 .not-only-heading {
@@ -188,21 +176,10 @@ a {
   cursor: pointer;
 }
 
-.form-wrapper {
-  max-width: 207px;
-  width: 207px;
-  height: 52px;
-}
-
-.form_make-friend {
-  width: 100%;
-  height: 100%;
-}
-
 .button_make-friend {
   background-color: #F1CDB3;
-  width: 100%;
-  height: 100%;
+  width: 207px;
+  height: 52px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -241,11 +218,6 @@ button:active {
 /* SECTION ABOUT  */
 .section-about {
   background-color: white;
-}
-
-.about-section-wrapper {
-  max-width: 1280px;
-  margin: 0 auto;
 }
 
 .about-container {
@@ -309,11 +281,6 @@ button:active {
   padding-bottom: 100px;
   display: flex;
   justify-content: center;
-}
-
-.section-our-friends-wrapper {
-  max-width: 1280px;
-  margin: 0 auto;
 }
 
 /* ИСПРАВИТЬ РАЗМЕР ШРИФТА ЩОБ НЕ ПРЫШАЛ */
@@ -455,11 +422,6 @@ button:active {
   padding-bottom: 100px;
 }
 
-.section-help-wrapper {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
 .section-help-heading {
   text-align: center;
   margin-bottom: 60px;
@@ -498,11 +460,7 @@ button:active {
   color: #545454;
   padding-top: 80px;
   padding-bottom: 100px;
-}
-
-.section-donation-wrapper {
-  max-width: 1280px;
-  margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .donation-container {
@@ -554,11 +512,6 @@ button:active {
 .footer {
   background-image: url(../../assets/noise_transparent.png);
   padding-top: 40px;
-}
-
-.footer-wrapper {
-  max-width: 1280px;
-  margin: 0 auto;
 }
 
 .footer-container {
@@ -666,6 +619,14 @@ button:active {
 }
 
 @media screen and (max-width: 1279px) {
+
+  .not-only-container {
+    /* gap:0; */
+    margin-right: 0;
+  }
+
+
+
   .about-container {
     margin-left: 16vw;
     margin-right: 16vw;
@@ -678,18 +639,31 @@ button:active {
   }
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1200px) {
   .not-only-container {
+    flex-direction: column;
+    align-items: center;
     margin-top: 60px;
     margin-left: auto;
     margin-right: auto;
-    width: 65%;
-    margin-bottom: 693px;
+    width: 59.89%;
   }
 
-  .section-not-only {
+  .not-only-text-container {
+    margin-top: 2px;
+  }
+
+  .not-only-puppy-container {
     background: no-repeat url(../../assets/start-screen-puppy-tablet.png);
-    background-position: bottom right;
+    width: 569px;
+    height: 593px;
+    margin-top: 98px;
+    margin-left: 17.9vw;
+  }
+
+  .button_make-friend {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -743,19 +717,11 @@ button:active {
     padding-right: 30px;
   }
 
-  .section-not-only {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-
-  .form_make-friend {
-    margin-left: auto;
-    margin-right: auto;
-    width: 207px;
+  .not-only-container {
+    gap: 0;
   }
 
   /* SECTION ABOUT  */
-
 
   .about-container {
     flex-direction: column-reverse;
@@ -842,17 +808,6 @@ button:active {
     padding-right: 10px;
   }
 
-  .section-not-only {
-    background: no-repeat url(../../assets/start-screen-puppy-tablet.png);
-    background-position: bottom right;
-    background-size: 95%;
-
-  }
-
-  .not-only-container {
-    margin-bottom: calc(100vw);
-  }
-
   .about-container {
     margin-left: 15vw;
     margin-right: 15vw;
@@ -896,12 +851,16 @@ button:active {
     max-width: 320px;
   }
 
-  .section-not-only {
+  .not-only-puppy-container {
+    background: no-repeat url(../../assets/start-screen-puppy-mobile.png);
+  }
+
+  /* .section-not-only {
     background: no-repeat url(../../assets/start-screen-puppy-mobile.png);
     background-position: bottom right;
     margin-left: 10px;
     margin-right: 10px;
-  }
+  } */
 
   .mobile-heading {
     font-size: 25px;
