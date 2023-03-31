@@ -138,6 +138,20 @@ a {
   cursor: auto;
 }
 
+.burger-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: white;
+}
+
+
+.burger-line {
+  width: 30px;
+  height: 2px;
+  background-color: #F1CDB3;
+}
+
 .not-only-container {
   display: flex;
   flex-direction: row;
@@ -151,6 +165,7 @@ a {
 .not-only-text-container {
   margin-top: 254px;
   width: fit-content;
+  width: -moz-fit-content;
 }
 
 .not-only-puppy-container {
@@ -439,6 +454,7 @@ button:active {
 .help-item {
   height: 113px;
   width: fit-content;
+  width: -moz-fit-content;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -460,6 +476,10 @@ button:active {
   color: #545454;
   padding-top: 80px;
   padding-bottom: 100px;
+  overflow-x: hidden;
+}
+
+.footer {
   overflow-x: hidden;
 }
 
@@ -491,6 +511,7 @@ button:active {
   display: flex;
   flex-direction: row;
   width: fit-content;
+  width: -moz-fit-content;
   gap: 15px;
   background-color: #F1CDB3;
   padding: 10px 15px;
@@ -657,6 +678,7 @@ button:active {
     background: no-repeat url(../../assets/start-screen-puppy-tablet.png);
     width: 569px;
     height: 593px;
+    max-height: 593px;
     margin-top: 98px;
     margin-left: 17.9vw;
   }
@@ -703,22 +725,23 @@ button:active {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .burger-icon-wrapper {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
+
+
+
   .container-main {
     max-width: 768px;
-  }
-
-  .header {
-    padding-top: 30px;
   }
 
   .header-container {
     padding-left: 30px;
     padding-right: 30px;
-  }
-
-  .not-only-container {
-    gap: 0;
   }
 
   /* SECTION ABOUT  */
@@ -758,12 +781,14 @@ button:active {
   }
 }
 
-
 @media screen and (max-width: 767px) {
-  .nav.top {
+
+  .nav-item,
+  .nav,
+  .nav-list {
     display: none;
   }
-
+  /*  */
   .paragraph-space {
     display: none;
   }
@@ -771,6 +796,15 @@ button:active {
   .not-only-container {
     text-align: center;
     width: 90%;
+    gap: 0;
+  }
+
+  .not-only-puppy-container {
+    width: 74vw;
+    min-width: 260px;
+    height: 77vw;
+    min-height: 272px;
+    background-size: 100% auto;
   }
 
   .not-only-heading {
@@ -790,14 +824,11 @@ button:active {
 
   .arrow_form.left {
     left: calc(50% - 92px);
-
   }
 
   .arrow_form.right {
     right: calc(50% - 92px);
-
   }
-
 
 }
 
@@ -834,33 +865,31 @@ button:active {
 }
 
 
-@media screen and (max-width: 600px) {}
-
 @media screen and (max-width: 320px) {
   .header-container {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .not-only-container {
-    width: 100%;
-    margin-bottom: 377px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .container-main {
     max-width: 320px;
   }
 
-  .not-only-puppy-container {
-    background: no-repeat url(../../assets/start-screen-puppy-mobile.png);
-  }
-
-  /* .section-not-only {
-    background: no-repeat url(../../assets/start-screen-puppy-mobile.png);
-    background-position: bottom right;
+  .not-only-container {
+    width: auto;
     margin-left: 10px;
     margin-right: 10px;
-  } */
+  }
+
+  .not-only-text-container {
+    margin-top: 0px;
+  }
+
+  .not-only-puppy-container {
+    background: no-repeat url(../../assets/start-screen-puppy-mobile.png);
+    margin-top: 104px;
+    margin-left: 40px;
+  }
 
   .mobile-heading {
     font-size: 25px;
