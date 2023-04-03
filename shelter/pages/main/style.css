@@ -244,7 +244,6 @@ button:active {
   padding-top: 80px;
   padding-bottom: 100px;
   gap: 9.375%;
-
 }
 
 .about-text-container {
@@ -298,7 +297,6 @@ button:active {
   justify-content: center;
 }
 
-/* ИСПРАВИТЬ РАЗМЕР ШРИФТА ЩОБ НЕ ПРЫШАЛ */
 .our-friends-heading {
   margin-bottom: 60px;
   text-align: center;
@@ -443,8 +441,9 @@ button:active {
 }
 
 .help-container {
-  margin-left: 127px;
-  margin-right: 127px;
+  max-width: 80.15%;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   row-gap: 56px;
   column-gap: 119px;
@@ -476,7 +475,6 @@ button:active {
   color: #545454;
   padding-top: 80px;
   padding-bottom: 100px;
-  overflow-x: hidden;
 }
 
 .footer {
@@ -484,15 +482,21 @@ button:active {
 }
 
 .donation-container {
-  margin-left: 182px;
-  margin-right: 182px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: row;
   gap: 30px;
+  width: 71.56%;
+  min-width: 888px;
+}
+
+.donation-text-container {
+  min-width: 353px;
 }
 
 .donation-puppy-container {
-  background-image: url(../../assets/donation-dog.png);
+  background: no-repeat url(../../assets/donation-dog.png);
   width: 505px;
   min-width: 505px;
   height: 261px;
@@ -546,8 +550,9 @@ button:active {
 .footer-text-container {
   display: flex;
   flex-direction: row;
-  gap: 161px;
-  padding-top: 16px;
+  justify-content: space-between;
+  width: 57.89vw;
+   padding-top: 16px;
 }
 
 .footer-heading {
@@ -646,8 +651,6 @@ button:active {
     margin-right: 0;
   }
 
-
-
   .about-container {
     margin-left: 16vw;
     margin-right: 16vw;
@@ -658,6 +661,29 @@ button:active {
   .slider-card.woody {
     display: none;
   }
+
+  .help-item.vitamins {
+    margin-left: 0;
+  }
+
+  .help-container {
+    max-width: 82%;
+    column-gap: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 22.1vw);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .help-item {
+    align-self: center
+  }
+
+  .help-item-text {
+    min-width: 170px;
+  }
+
 }
 
 @media screen and (max-width: 1200px) {
@@ -693,7 +719,6 @@ button:active {
   .about-container {
     margin-left: 10vw;
     margin-right: 10vw;
-    /* min-width: 650px; */
   }
 
   .slider-images-container {
@@ -702,6 +727,24 @@ button:active {
 
   .slider-container {
     gap: 5vw;
+  }
+
+  .donation-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: fit-content;
+    max-width: 505px;
+    min-width: auto;
+    gap: 49px;
+  }
+
+  .donation-text-container {
+    max-width: 380px;
+  }
+
+  .paragraph-bank-name {
+    margin-top: 19px;
+    margin-bottom: 19px;
   }
 }
 
@@ -733,8 +776,6 @@ button:active {
 
 @media screen and (max-width: 768px) {
 
-
-
   .container-main {
     max-width: 768px;
   }
@@ -763,6 +804,7 @@ button:active {
     width: 69.7%;
     min-width: 300px;
     background-size: contain;
+    background-position: left;
   }
 
   /* SLIDER SECTION  */
@@ -788,7 +830,7 @@ button:active {
   .nav-list {
     display: none;
   }
-  /*  */
+
   .paragraph-space {
     display: none;
   }
@@ -812,6 +854,16 @@ button:active {
     line-height: normal;
   }
 
+  .about-section-heading {
+    min-width: auto;
+    text-align: center;
+  }
+
+  .our-friends-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .slider-container {
     position: relative;
     margin-bottom: 114px;
@@ -830,7 +882,88 @@ button:active {
     right: calc(50% - 92px);
   }
 
+  /* HELP SECTION */
+
+  .section-help {
+    padding-top: 42px;
+  }
+
+  .section-help-heading {
+    margin-bottom: 42px;
+  }
+
+  .help-container {
+    grid-template-columns: repeat(2, 40.6vw);
+    grid-gap: 30px;
+  }
+
+  .help-item {
+    height: 87px;
+  }
+
+  .help-item img {
+    max-height: 50px;
+  }
+
+  .help-item.collars img {
+    max-height: 43.7px;
+    margin-top: 2px;
+  }
+
+  .help-item.vitamins img {
+    max-height: 45.13px;
+    margin-top: 2px;
+  }
+
+  .help-item.bowls img {
+    max-height: 47.35px;
+  }
+
+  .help-item-text {
+    font-size: 15px;
+    line-height: 16.5px;
+    min-width: 130px;
+  }
+
+  /* SECTION DONATION  */
+  .donation-container {
+    width: 87.5%;
+  }
+
+  .donation-text-container {
+    min-width: fit-content;
+  }
+  .section-donation-heading {
+    text-align: center;
+  }
+.card-number-container {
+  margin-left: auto;
+  margin-right: auto;
 }
+  .paragraph-bank-name {
+    text-align: center;
+    letter-spacing: normal;
+  }
+  .paragraph-card-legal {
+    max-width: 370px;
+    text-align: justifyyy;
+  }
+}
+
+
+@media screen and (max-width: 754px) {
+  .section-help {
+    padding-bottom: 13.125vw;
+  }
+}
+@media screen and (max-width: 754px) {
+
+  .about-container {
+    padding-bottom: 13.125vw;
+  }
+
+}
+
 
 
 @media screen and (max-width: 640px) {
@@ -844,11 +977,6 @@ button:active {
     margin-right: 15vw;
   }
 
-  .about-section-heading {
-    font-size: 25px;
-    min-width: auto;
-    text-align: center;
-  }
 
   .about-section-img {
     width: calc(47vw);
@@ -864,7 +992,57 @@ button:active {
   }
 }
 
+@media screen and (max-width: 621px) {
+  .donation-puppy-container {
+    width: 81.25vw;
+    min-width: 260px;
+    min-height: 135.2px;
+    background-size: 100% auto;
 
+
+  }
+}
+
+@media screen and (max-width: 603px) {
+
+  .section-donation {
+    padding-top: 13.125vw;
+  }
+
+}
+
+@media screen and (max-width: 460px) {
+  .our-friends-heading {
+    font-size: 7.8125vw;
+    min-width: 400px;
+    min-width: 86.9vw;
+  }
+}
+
+@media screen and (max-width: 448px) {
+
+  .mobile-heading.section-help-heading,
+  .about-section-heading,
+  .our-friends-heading,
+  .section-donation-heading {
+    font-size: 7.8125vw;
+    line-height: 10.15vw;
+  }
+}
+
+@media screen and (max-width: 426px) {
+
+
+  .card-number {
+    font-size: 4.6875vw;
+  }
+}
+
+@media screen and (max-width: 326px) {
+  .card-number-container {
+    gap: 14px
+  }
+}
 @media screen and (max-width: 320px) {
   .header-container {
     padding-left: 20px;
@@ -946,5 +1124,56 @@ button:active {
   .slider-images-container {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .section-help {
+    padding-bottom: 42px;
+  }
+
+  /* SECTION DONATION  */
+
+  .section-donation {
+    padding-top: 40px;
+    padding-bottom: 42px;
+  }
+
+  .donation-container {
+    width: 87.5%;
+    gap: 42px;
+  }
+
+  .donation-text-container {
+    min-width: 281px;
+  }
+
+  .donation-puppy-container {
+    background: no-repeat url(../../assets/donation-dog-mobile.png);
+    width: 260px;
+    min-width: 260px;
+    height: 135.2px;
+    margin-top: 0px;
+  }
+
+  .paragraph-bank-name {
+    letter-spacing: 0;
+    margin-left: -1px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+  .card-number-container {
+    padding: 10px 15px;
+    gap: 15px;
+  }
+
+  .card-number {
+    font-size: 15px;
+    line-height: 17px;
+    text-align: left;
+    margin-top: 3px;
+  }
+
+  .paragraph-card-legal {
+    text-align: justify;
   }
 }
