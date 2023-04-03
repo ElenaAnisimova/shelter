@@ -16,6 +16,7 @@ html {
   margin-inline-end: 0px;
   padding-inline-start: 0px;
   font-family: Georgia;
+  /* border: 1px solid red; */
 }
 
 body {
@@ -25,7 +26,7 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   padding: 0;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   width: 100%;
   background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 }
@@ -172,7 +173,7 @@ a {
   width: 698px;
   height: 728px;
   margin-top: 91px;
-}
+ }
 
 .not-only-heading {
   font-size: 44px;
@@ -270,6 +271,7 @@ button:active {
   background-image: url(../../assets/about-pets.png);
   background-repeat: no-repeat;
   min-width: 300px;
+  overflow-x: hidden;
 }
 
 .about-paragraph.first,
@@ -737,6 +739,7 @@ button:active {
 }
 
 @media screen and (max-width: 976px) {
+
   .about-container {
     margin-left: 10vw;
     margin-right: 10vw;
@@ -820,8 +823,8 @@ button:active {
     margin: auto;
     width: 69.7%;
     min-width: 300px;
-    background-size: contain;
-    background-position: left;
+    background-size: 100% auto;
+    background-position:center
   }
 
   /* SLIDER SECTION  */
@@ -1143,8 +1146,7 @@ button:active {
 
   .paragraph-card-legal {
     max-width: 370px;
-    text-align: justify;
-  }
+     }
 
   /* FOOTER  */
   .footer-container {
@@ -1416,7 +1418,4 @@ button:active {
     margin-top: 3px;
   }
 
-  .paragraph-card-legal {
-    text-align: justify;
-  }
-}
+ }

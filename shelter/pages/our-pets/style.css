@@ -228,6 +228,7 @@ button:active {
 .slider-images-container {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   column-gap: 40px;
   row-gap: 30px;
   flex-wrap: wrap;
@@ -334,7 +335,6 @@ button:active {
 
 .kathrine.pet-img {
   background: url(../../assets/pets-katrine.png);
-
 }
 
 .jennifer.pet-img {
@@ -547,15 +547,28 @@ button:active {
   height: 310px;
 }
 
-@media screen and (max-width: 1060px) {
-  .footer {
-    padding-top: 14px;
+@media screen and (max-width: 1268px) {
+  .slider-container {
+    max-width: 1199px;
   }
+
+  .slider-card.scarlett,
+  .slider-card.freddie {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 1060px) {
 
   .footer-container {
     width: 75.39vw;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .footer-gradient {
+    padding-top: 13px;
   }
 
   .footer-container {
@@ -567,6 +580,23 @@ button:active {
   .footer-text-container {
     width: 83.39vw;
   }
+}
+
+@media screen and (max-width: 952px) {
+
+  .section-our-friends {
+    padding-bottom: 76px;
+  }
+
+  .slider-container {
+    max-width: 768px;
+    margin-bottom: 40px;
+  }
+
+  .our-friends-heading {
+    margin-bottom: 30px;
+  }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -588,9 +618,7 @@ button:active {
 
 @media screen and (max-width: 767.2px) {
 
-  .nav-item,
-  .nav,
-  .nav-list {
+  .nav {
     display: none;
   }
 
@@ -610,6 +638,10 @@ button:active {
     display: none;
   }
 
+  .footer-heading {
+    text-align: center;
+  }
+
   .contact-container {
     justify-content: center;
   }
@@ -620,12 +652,82 @@ button:active {
     margin-bottom: 39px;
   }
 
+  .contact-container.email {
+    margin-bottom: 39px;
+  }
+
   .boston {
     margin-bottom: 44px;
   }
 
   .pin-img.second {
     margin-top: -4px;
+  }
+
+  .phone.contact {
+    margin-top: 4px;
+  }
+
+  .contact-container.boston,
+  .contact-container.london {
+    justify-content: flex-start;
+  }
+
+  .contact-container.london span {
+    padding-top: 2px;
+  }
+
+}
+@media screen and (max-width: 767px) {
+
+  .nav {
+    display: none;
+  }
+
+  /* FOOTER  */
+  .footer-container {
+    gap: 37px;
+  }
+
+  .footer-text-container {
+    flex-direction: column;
+    width: 93.75vw;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .footer-container br {
+    display: none;
+  }
+
+  .footer-heading {
+    text-align: center;
+  }
+
+  .contact-container {
+    justify-content: center;
+  }
+
+  .section-heading.adresses {
+    width: 289px;
+    margin-left: 5px;
+    margin-bottom: 39px;
+  }
+
+  .contact-container.email {
+    margin-bottom: 39px;
+  }
+
+  .boston {
+    margin-bottom: 44px;
+  }
+
+  .pin-img.second {
+    margin-top: -4px;
+  }
+
+  .phone.contact {
+    margin-top: 4px;
   }
 
   .contact-container.boston,
@@ -644,15 +746,49 @@ button:active {
     padding-left: 10px;
     padding-right: 10px;
   }
+
+  .slider-card.sophia,
+  .slider-card.timmy,
+  .slider-card.charly {
+    display: none;
+  }
+
+  .pagination-buttons-container {
+    gap: 3.125vw
+  }
+}
+
+@media screen and (max-width: 620px) {
+
+  .slider-container {
+    max-width: 270px;
+  }
+}
+
+@media screen and (max-width: 609px) {
+  .section-our-friends {
+    padding-top: 13.125vw;
+  }
+}
+
+@media screen and (max-width: 579px) {
+
+  .section-our-friends {
+    padding-bottom: 14vw;
+  }
+
 }
 
 @media screen and (max-width: 448px) {
 
-  .footer-heading {
+  .footer-heading,
+  .our-friends-heading {
     font-size: 7.8125vw;
     line-height: 10.15vw;
   }
 }
+
+
 
 @media screen and (max-width: 369px) {
 
@@ -670,6 +806,10 @@ button:active {
   .header-container {
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .our-friends-heading {
+    margin-bottom: 42px;
   }
 
   .mobile-heading {
