@@ -455,6 +455,7 @@ button:active {
   flex-direction: row;
   justify-content: space-between;
   width: 57.89vw;
+  max-width: 800px;
   padding-top: 16px;
 }
 
