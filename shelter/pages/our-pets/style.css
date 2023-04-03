@@ -5,7 +5,6 @@ root {
 
 html {
   scroll-behavior: smooth;
-
 }
 
 * {
@@ -53,11 +52,6 @@ a {
   max-width: 1280px;
   margin: 0 auto;
 }
-
-/* .section-not-only {
-  /* background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%); */
-/* background-position: bottom right; */
-
 
 .section-not-only-wrapper.wrapper {
   max-width: 1280px;
@@ -162,6 +156,18 @@ a {
   cursor: auto;
 }
 
+.burger-icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: white;
+}
+
+.burger-line {
+  width: 30px;
+  height: 2px;
+  background-color: black;
+}
 
 .button:hover,
 .arrow-left.button:hover,
@@ -183,6 +189,7 @@ button:active {
 
 
 /* SECTION OUR FRIENDS/SLIDER */
+
 .section-our-friends {
   background-color: #F6F6F6;
   color: #545454;
@@ -212,9 +219,6 @@ button:active {
 }
 
 .slider-container {
-  /* display: flex;
-  flex-direction: row;
-  gap: 53px; */
   max-width: 1200px;
   margin-bottom: 60px;
   margin-left: auto;
@@ -245,6 +249,7 @@ button:active {
   flex-direction: row;
   gap: 20px;
   width: fit-content;
+  width: -moz-fit-content;
   margin: 0 auto;
 }
 
@@ -398,9 +403,10 @@ button:active {
   background-color: #FAFAFA;
   border: 2px solid #F1CDB3;
 }
-.button_learn-more:active  {
-  background-color:#f8e6da !important;
-} 
+
+.button_learn-more:active {
+  background-color: #f8e6da !important;
+}
 
 .slider-card:hover button {
   background-color: #FDDCC4;
@@ -422,14 +428,12 @@ button:active {
 /* FOOTER  */
 .footer {
   background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
-
 }
 
 .footer-gradient {
   width: 100%;
   background-image: url(../../assets/noise_transparent.png);
   height: 100%;
-
   padding-top: 40px;
 }
 
@@ -449,7 +453,8 @@ button:active {
 .footer-text-container {
   display: flex;
   flex-direction: row;
-  gap: 161px;
+  justify-content: space-between;
+  width: 57.89vw;
   padding-top: 16px;
 }
 
@@ -540,4 +545,138 @@ button:active {
   background-image: url(../../assets/footer-puppy.png);
   width: 300px;
   height: 310px;
+}
+
+@media screen and (max-width: 1060px) {
+  .footer {
+    padding-top: 14px;
+  }
+
+  .footer-container {
+    width: 75.39vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 62px;
+  }
+
+  .footer-text-container {
+    width: 83.39vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .burger-icon-wrapper {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .header-container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+}
+
+@media screen and (max-width: 767.2px) {
+
+  .nav-item,
+  .nav,
+  .nav-list {
+    display: none;
+  }
+
+  /* FOOTER  */
+  .footer-container {
+    gap: 37px;
+  }
+
+  .footer-text-container {
+    flex-direction: column;
+    width: 93.75vw;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .footer-container br {
+    display: none;
+  }
+
+  .contact-container {
+    justify-content: center;
+  }
+
+  .section-heading.adresses {
+    width: 289px;
+    margin-left: 5px;
+    margin-bottom: 39px;
+  }
+
+  .boston {
+    margin-bottom: 44px;
+  }
+
+  .pin-img.second {
+    margin-top: -4px;
+  }
+
+  .contact-container.boston,
+  .contact-container.london {
+    justify-content: flex-start;
+  }
+
+  .contact-container.london span {
+    padding-top: 2px;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+  .header-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 448px) {
+
+  .footer-heading {
+    font-size: 7.8125vw;
+    line-height: 10.15vw;
+  }
+}
+
+@media screen and (max-width: 369px) {
+
+  .footer-image {
+    width: 81.35vw;
+    height: 84vw;
+    background-size: 100% auto;
+    background-size: contain;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+
+  .header-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .mobile-heading {
+    font-size: 25px;
+    text-align: center;
+    line-height: 32.5px;
+    letter-spacing: 1.35px;
+  }
+
 }

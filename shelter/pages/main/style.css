@@ -25,7 +25,7 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   padding: 0;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   width: 100%;
   background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 }
@@ -144,7 +144,6 @@ a {
   gap: 8px;
   color: white;
 }
-
 
 .burger-line {
   width: 30px;
@@ -477,10 +476,6 @@ button:active {
   padding-bottom: 100px;
 }
 
-.footer {
-  overflow-x: hidden;
-}
-
 .donation-container {
   margin-left: auto;
   margin-right: auto;
@@ -552,7 +547,7 @@ button:active {
   flex-direction: row;
   justify-content: space-between;
   width: 57.89vw;
-   padding-top: 16px;
+  padding-top: 16px;
 }
 
 .footer-heading {
@@ -620,6 +615,10 @@ button:active {
   margin-bottom: 43px;
 }
 
+.phone-img {
+  margin-top: -3px;
+}
+
 .pin-img.first {
   margin-top: 6px;
 }
@@ -639,7 +638,7 @@ button:active {
 }
 
 .footer-image {
-  background-image: url(../../assets/footer-puppy.png);
+  background: no-repeat url(../../assets/footer-puppy.png);
   width: 300px;
   height: 310px;
 }
@@ -715,6 +714,28 @@ button:active {
   }
 }
 
+@media screen and (max-width: 1060px) {
+  .footer {
+    padding-top: 14px;
+  }
+
+  .footer-container {
+    width: 75.39vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 62px;
+  }
+
+  .footer-text-container {
+    width: 83.39vw;
+  }
+}
+
 @media screen and (max-width: 976px) {
   .about-container {
     margin-left: 10vw;
@@ -776,10 +797,6 @@ button:active {
 
 @media screen and (max-width: 768px) {
 
-  .container-main {
-    max-width: 768px;
-  }
-
   .header-container {
     padding-left: 30px;
     padding-right: 30px;
@@ -823,6 +840,181 @@ button:active {
   }
 }
 
+@media screen and (max-width: 767.2px) {
+
+  .nav-item,
+  .nav,
+  .nav-list {
+    display: none;
+  }
+
+  .paragraph-space {
+    display: none;
+  }
+
+  .not-only-container {
+    text-align: center;
+    width: 90%;
+    gap: 0;
+  }
+
+  .not-only-puppy-container {
+    width: 74vw;
+    min-width: 260px;
+    height: 77vw;
+    min-height: 272px;
+    background-size: 100% auto;
+  }
+
+  .not-only-heading {
+    font-size: 30px;
+    line-height: normal;
+  }
+
+  .about-section-heading {
+    min-width: auto;
+    text-align: center;
+  }
+
+  .our-friends-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .slider-container {
+    position: relative;
+    margin-bottom: 114px;
+  }
+
+  .arrow_form {
+    position: absolute;
+    bottom: -71px;
+  }
+
+  .arrow_form.left {
+    left: calc(50% - 92px);
+  }
+
+  .arrow_form.right {
+    right: calc(50% - 92px);
+  }
+
+  /* HELP SECTION */
+
+  .section-help {
+    padding-top: 42px;
+  }
+
+  .section-help-heading {
+    margin-bottom: 42px;
+  }
+
+  .help-container {
+    grid-template-columns: repeat(2, 40.6vw);
+    grid-gap: 30px;
+  }
+
+  .help-item {
+    height: 87px;
+  }
+
+  .help-item img {
+    max-height: 50px;
+  }
+
+  .help-item.collars img {
+    max-height: 43.7px;
+    margin-top: 2px;
+  }
+
+  .help-item.vitamins img {
+    max-height: 45.13px;
+    margin-top: 2px;
+  }
+
+  .help-item.bowls img {
+    max-height: 47.35px;
+  }
+
+  .help-item-text {
+    font-size: 15px;
+    line-height: 16.5px;
+    min-width: 130px;
+  }
+
+  /* SECTION DONATION  */
+  .donation-container {
+    width: 87.5%;
+  }
+
+  .donation-text-container {
+    min-width: fit-content;
+  }
+
+  .section-donation-heading,
+  .footer-heading {
+    text-align: center;
+  }
+
+  .card-number-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .paragraph-bank-name {
+    text-align: center;
+    letter-spacing: normal;
+  }
+
+  .paragraph-card-legal {
+    max-width: 370px;
+    text-align: justify;
+  }
+
+  /* FOOTER  */
+  .footer-container {
+    gap: 37px;
+  }
+
+  .footer-text-container {
+    flex-direction: column;
+    width: 93.75vw;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .footer-container br {
+    display: none;
+  }
+
+  .contact-container {
+    justify-content: center;
+  }
+
+  .section-heading.adresses {
+    width: 289px;
+    margin-left: 5px;
+    margin-bottom: 39px;
+  }
+
+  .boston {
+    margin-bottom: 44px;
+  }
+
+  .pin-img.second {
+    margin-top: -4px;
+  }
+
+  .contact-container.boston,
+  .contact-container.london {
+    justify-content: flex-start;
+  }
+
+  .contact-container.london span {
+    padding-top: 2px;
+  }
+
+}
 @media screen and (max-width: 767px) {
 
   .nav-item,
@@ -933,38 +1125,82 @@ button:active {
   .donation-text-container {
     min-width: fit-content;
   }
-  .section-donation-heading {
+
+  .section-donation-heading,
+  .footer-heading {
     text-align: center;
   }
-.card-number-container {
-  margin-left: auto;
-  margin-right: auto;
-}
+
+  .card-number-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .paragraph-bank-name {
     text-align: center;
     letter-spacing: normal;
   }
+
   .paragraph-card-legal {
     max-width: 370px;
-    text-align: justifyyy;
+    text-align: justify;
   }
+
+  /* FOOTER  */
+  .footer-container {
+    gap: 37px;
+  }
+
+  .footer-text-container {
+    flex-direction: column;
+    width: 93.75vw;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .footer-container br {
+    display: none;
+  }
+
+  .contact-container {
+    justify-content: center;
+  }
+
+  .section-heading.adresses {
+    width: 289px;
+    margin-left: 5px;
+    margin-bottom: 39px;
+  }
+
+  .boston {
+    margin-bottom: 44px;
+  }
+
+  .pin-img.second {
+    margin-top: -4px;
+  }
+
+  .contact-container.boston,
+  .contact-container.london {
+    justify-content: flex-start;
+  }
+
+  .contact-container.london span {
+    padding-top: 2px;
+  }
+
 }
 
 
-@media screen and (max-width: 754px) {
-  .section-help {
+@media screen and (max-width: 762px) {
+
+  .section-help,
+  .about-container,
+  .section-donation {
     padding-bottom: 13.125vw;
   }
-}
-@media screen and (max-width: 754px) {
-
-  .about-container {
-    padding-bottom: 13.125vw;
-  }
 
 }
-
-
 
 @media screen and (max-width: 640px) {
   .header-container {
@@ -993,22 +1229,20 @@ button:active {
 }
 
 @media screen and (max-width: 621px) {
+
   .donation-puppy-container {
     width: 81.25vw;
+    height: 42.25vw;
     min-width: 260px;
     min-height: 135.2px;
     background-size: 100% auto;
-
-
   }
 }
 
 @media screen and (max-width: 603px) {
-
   .section-donation {
     padding-top: 13.125vw;
   }
-
 }
 
 @media screen and (max-width: 460px) {
@@ -1024,7 +1258,8 @@ button:active {
   .mobile-heading.section-help-heading,
   .about-section-heading,
   .our-friends-heading,
-  .section-donation-heading {
+  .section-donation-heading,
+  .footer-heading {
     font-size: 7.8125vw;
     line-height: 10.15vw;
   }
@@ -1032,10 +1267,21 @@ button:active {
 
 @media screen and (max-width: 426px) {
 
-
   .card-number {
     font-size: 4.6875vw;
   }
+
+}
+
+@media screen and (max-width: 369px) {
+
+  .footer-image {
+    width: 81.35vw;
+    height: 84vw;
+    background-size: 100% auto;
+    background-size: contain;
+  }
+
 }
 
 @media screen and (max-width: 326px) {
@@ -1043,14 +1289,12 @@ button:active {
     gap: 14px
   }
 }
+
 @media screen and (max-width: 320px) {
+
   .header-container {
     padding-left: 20px;
     padding-right: 20px;
-  }
-
-  .container-main {
-    max-width: 320px;
   }
 
   .not-only-container {
@@ -1091,7 +1335,6 @@ button:active {
 
   .about-paragraph {
     text-align: justify;
-
   }
 
   .about-paragraph.second {
