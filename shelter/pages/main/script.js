@@ -1,97 +1,4 @@
 
-console.log("Итого: 100/100");
-
-const petsDescription = [
-  {
-    "name": "Jennifer",
-    "img": "../../assets/images/jennifer.png",
-    "type": "Dog",
-    "breed": "Labrador",
-    "description": "Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.",
-    "age": "2 months",
-    "inoculations": ["none"],
-    "diseases": ["none"],
-    "parasites": ["none"]
-  },
-  {
-    "name": "Sophia",
-    "img": "../../assets/images/sophia.png",
-    "type": "Dog",
-    "breed": "Shih tzu",
-    "description": "Sophia here and I'm looking for my forever home to live out the best years of my life. I am full of energy. Everyday I'm learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
-    "age": "1 month",
-    "inoculations": ["parvovirus"],
-    "diseases": ["none"],
-    "parasites": ["none"]
-  },
-  {
-    "name": "Woody",
-    "img": "../../assets/images/woody.png",
-    "type": "Dog",
-    "breed": "Golden Retriever",
-    "description": "Woody is a handsome 3 1/2 year old boy. Woody does know basic commands and is a smart pup. Since he is on the stronger side, he will learn a lot from your training. Woody will be happier when he finds a new family that can spend a lot of time with him.",
-    "age": "3 years 6 months",
-    "inoculations": ["adenovirus", "distemper"],
-    "diseases": ["right back leg mobility reduced"],
-    "parasites": ["none"]
-  },
-  {
-    "name": "Scarlett",
-    "img": "../../assets/images/scarlett.png",
-    "type": "Dog",
-    "breed": "Jack Russell Terrier",
-    "description": "Scarlett is a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.",
-    "age": "3 months",
-    "inoculations": ["parainfluenza"],
-    "diseases": ["none"],
-    "parasites": ["none"]
-  },
-  {
-    "name": "Katrine",
-    "img": "../../assets/images/katrine.png",
-    "type": "Cat",
-    "breed": "British Shorthair",
-    "description": "Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.",
-    "age": "6 months",
-    "inoculations": ["panleukopenia"],
-    "diseases": ["none"],
-    "parasites": ["none"]
-  },
-  {
-    "name": "Timmy",
-    "img": "../../assets/images/timmy.png",
-    "type": "Cat",
-    "breed": "British Shorthair",
-    "description": "Timmy is an adorable grey british shorthair male. He loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. Timmy has a lot to say and wants a person to share his thoughts with.",
-    "age": "2 years 3 months",
-    "inoculations": ["calicivirus", "viral rhinotracheitis"],
-    "diseases": ["kidney stones"],
-    "parasites": ["none"]
-  },
-  {
-    "name": "Freddie",
-    "img": "../../assets/images/freddie.png",
-    "type": "Cat",
-    "breed": "British Shorthair",
-    "description": "Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.",
-    "age": "2 months",
-    "inoculations": ["rabies"],
-    "diseases": ["none"],
-    "parasites": ["none"]
-  },
-  {
-    "name": "Charly",
-    "img": "../../assets/images/charly.png",
-    "type": "Dog",
-    "breed": "Jack Russell Terrier",
-    "description": "This cute boy, Charly, is three years old and he likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. Charly has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",
-    "age": "8 years",
-    "inoculations": ["bordetella bronchiseptica", "leptospirosis"],
-    "diseases": ["deafness", "blindness"],
-    "parasites": ["lice", "fleas"]
-  }
-]
-
 
 // BURGER MENU
 
@@ -121,13 +28,173 @@ if (window.innerWidth < 767.2) {
 
 popup.addEventListener('click', (e) => {
   if (e.target.classList.contains('pop-up-background')) {
-   openMenu.classList.toggle('burger-menu_active');
-  popup.classList.toggle('appearing');
-  burgerOpenButton.classList.toggle('burger-icon_active');
-  document.body.classList.toggle('no-scroll')
+    openMenu.classList.toggle('burger-menu_active');
+    popup.classList.toggle('appearing');
+    burgerOpenButton.classList.toggle('burger-icon_active');
+    document.body.classList.toggle('no-scroll')
   }
 })
 
-function turnIcon() {
-  burgerOpenButton.classList.remove('burger-icon_active');
+// console.log("Итого: 100/100");
+
+
+
+
+// SLIDER
+import { petsDescription } from "../../assets/pet-info.js"
+console.log(petsDescription[6].name)
+
+const slider = document.querySelector('.slider-images-container')
+const sliderPartOne = document.querySelector('.slider-part-one');
+const sliderPartTwo = document.querySelector('.slider-part-two');
+const sliderPartThree = document.querySelector('.slider-part-three');
+
+const arrowLeft = document.querySelector('.arrow-left');
+const arrowRight = document.querySelector('.arrow-right');
+// const animalCards = document.querySelectorAll('.card-container');
+// const animalCardsArray = [...document.querySelectorAll('.card-container')];
+
+//              RANDOMAIZER
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7];
+const shuffleArray = (array) => {
+  return array.sort(() => 0.5 - Math.random());
+};
+
+// let randomNumber = shuffleArr(numbers)[0];
+
+// APPEND SLIDER ITEMS
+
+function addPetsCardsOne() {
+  // sliderPartOne.innerHTML = '';
+  for (let i = 0; i < 3; i++) {
+    const sliderCard = document.createElement('div');
+    sliderCard.className = "slider-card"
+    sliderPartOne.append(sliderCard);
+
+    const petImage = document.createElement('img');
+    petImage.className = "pet-img"
+    sliderCard.append(petImage);
+
+    const petName = document.createElement('div');
+    petName.className = "pet-name paragraph-20"
+    sliderCard.append(petName);
+
+    const formLearn = document.createElement('form');
+    formLearn.className = "buttons form_learn-more"
+    sliderCard.append(formLearn);
+
+    const buttonLearn = document.createElement('button');
+    buttonLearn.className = "button_learn-more button"
+    formLearn.append(buttonLearn);
+
+    const spanLearn = document.createElement('span');
+    spanLearn.className = "button-text"
+    spanLearn.innerHTML = "Learn more"
+    buttonLearn.append(spanLearn);
+
+    // const answerText = document.createElement('span');
+    // answerText.innerHTML = birdsData[levelCounter][i].name;
+    // answerOption.append(answerText);
+  };
+};
+addPetsCardsOne();
+
+function addPetsCardsTwo() {
+  // sliderPartOne.innerHTML = '';
+  for (let i = 0; i < 3; i++) {
+    const sliderCard = document.createElement('div');
+    sliderCard.className = "slider-card"
+    sliderPartTwo.append(sliderCard);
+
+    const petImage = document.createElement('img');
+    petImage.className = "pet-img"
+    sliderCard.append(petImage);
+
+    const petName = document.createElement('div');
+    petName.className = "pet-name paragraph-20"
+    sliderCard.append(petName);
+
+    const formLearn = document.createElement('form');
+    formLearn.className = "buttons form_learn-more"
+    sliderCard.append(formLearn);
+
+    const buttonLearn = document.createElement('button');
+    buttonLearn.className = "button_learn-more button"
+    formLearn.append(buttonLearn);
+
+    const spanLearn = document.createElement('span');
+    spanLearn.className = "button-text"
+    spanLearn.innerHTML = "Learn more"
+    buttonLearn.append(spanLearn);
+
+   };
+};
+addPetsCardsTwo();
+
+function addPetsCardsThree() {
+  // sliderPartOne.innerHTML = '';
+  for (let i = 0; i < 3; i++) {
+    const sliderCard = document.createElement('div');
+    sliderCard.className = "slider-card"
+    sliderPartThree.append(sliderCard);
+
+    const petImage = document.createElement('img');
+    petImage.className = "pet-img"
+    sliderCard.append(petImage);
+
+    const petName = document.createElement('div');
+    petName.className = "pet-name paragraph-20"
+    sliderCard.append(petName);
+
+    const formLearn = document.createElement('form');
+    formLearn.className = "buttons form_learn-more"
+    sliderCard.append(formLearn);
+
+    const buttonLearn = document.createElement('button');
+    buttonLearn.className = "button_learn-more button"
+    formLearn.append(buttonLearn);
+
+    const spanLearn = document.createElement('span');
+    spanLearn.className = "button-text"
+    spanLearn.innerHTML = "Learn more"
+    buttonLearn.append(spanLearn);
+
+   };
+};
+addPetsCardsThree();
+
+function fillPetCards () {
+  for (let i = 0; i < 9; i++) {
+
+
+
+  }
 }
+
+
+
+
+
+// arrowRight.addEventListener('click', function () { for (var i = sliderItemOne.children.length; i >= 0; i--) {
+//        slider.style.transform = 'translate(33.33%'
+// };});
+
+
+// arrowLeft.addEventListener('click', function () {
+//   for (var i = sliderItemOne.children.length; i >= 0; i--) {
+//     sliderItemOne.appendChild(sliderItemOne.children[Math.random() * i | 0]);
+//     sliderItemTwo.appendChild(sliderItemTwo.children[Math.random() * i | 0]);
+//     sliderItemThree.appendChild(sliderItemThree.children[Math.random() * i | 0]);
+//     slider.style.transform = 'translate(-33.33%'
+//   };
+// });
+
+
+// slider.addEventListener('transitionend', function () {
+//   slider.appendChild(slider.firstElementChild);
+//   slider.style.transition = 'none';
+//   slider.style.transform = 'translate(0)';
+//   setTimeout(function () {
+//     slider.style.transition = 'all 0.4s';
+//   })
+// });
