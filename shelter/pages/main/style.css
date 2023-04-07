@@ -540,7 +540,7 @@ button:active {
 
 .slider-card:hover button {
   background-color: #FDDCC4;
-  transition: 0.3s;
+  /* transition: 0.3s; */
 }
 
 .form_get-know {

@@ -42,9 +42,9 @@ popup.addEventListener('click', (e) => {
 
 // SLIDER
 import { petsDescription } from "../../assets/pet-info.js"
-console.log(petsDescription[6].name)
+// console.log(petsDescription[6].name)
 
-const slider = document.querySelector('.slider-images-container')
+const slider = document.querySelector('.slider-visible-wrapper')
 const sliderPartOne = document.querySelector('.slider-part-one');
 const sliderPartTwo = document.querySelector('.slider-part-two');
 const sliderPartThree = document.querySelector('.slider-part-three');
@@ -56,11 +56,13 @@ const arrowRight = document.querySelector('.arrow-right');
 
 //              RANDOMAIZER
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7];
-const shuffleArray = (array) => {
+
+const shuffleArr = (array) => {
   return array.sort(() => 0.5 - Math.random());
 };
 
-// let randomNumber = shuffleArr(numbers)[0];
+let randomNumbersArr = shuffleArr(numbers);
+console.log(randomNumbersArr);
 
 // APPEND SLIDER ITEMS
 
@@ -97,6 +99,10 @@ function addPetsCardsOne() {
     // answerOption.append(answerText);
   };
 };
+
+
+
+
 addPetsCardsOne();
 
 function addPetsCardsTwo() {
@@ -109,10 +115,12 @@ function addPetsCardsTwo() {
     const petImage = document.createElement('img');
     petImage.className = "pet-img"
     sliderCard.append(petImage);
+    petImage.style.backgroundImage = `url(${(petsDescription[randomNumbersArr[i]].img)})`;
 
     const petName = document.createElement('div');
     petName.className = "pet-name paragraph-20"
     sliderCard.append(petName);
+    petName.innerHTML = petsDescription[randomNumbersArr[i]].name
 
     const formLearn = document.createElement('form');
     formLearn.className = "buttons form_learn-more"
@@ -127,10 +135,19 @@ function addPetsCardsTwo() {
     spanLearn.innerHTML = "Learn more"
     buttonLearn.append(spanLearn);
 
-   };
+  };
 };
 addPetsCardsTwo();
 
+
+// style.backgroundImage = `url(${(levelQuestion[birdId].image)})`;
+function fillCardsContentOnLoad() {
+  for (let i = 0; i < 3; i++) {
+
+
+
+  }
+}
 function addPetsCardsThree() {
   // sliderPartOne.innerHTML = '';
   for (let i = 0; i < 3; i++) {
@@ -159,36 +176,35 @@ function addPetsCardsThree() {
     spanLearn.innerHTML = "Learn more"
     buttonLearn.append(spanLearn);
 
-   };
+  };
 };
 addPetsCardsThree();
 
-function fillPetCards () {
-  for (let i = 0; i < 9; i++) {
+// function fillPetCards() {
+//   for (let i = 0; i < 9; i++) {
 
 
 
-  }
-}
+//   }
+// }
 
 
-
-
-
-// arrowRight.addEventListener('click', function () { for (var i = sliderItemOne.children.length; i >= 0; i--) {
-//        slider.style.transform = 'translate(33.33%'
-// };});
-
-
-// arrowLeft.addEventListener('click', function () {
-//   for (var i = sliderItemOne.children.length; i >= 0; i--) {
-//     sliderItemOne.appendChild(sliderItemOne.children[Math.random() * i | 0]);
-//     sliderItemTwo.appendChild(sliderItemTwo.children[Math.random() * i | 0]);
-//     sliderItemThree.appendChild(sliderItemThree.children[Math.random() * i | 0]);
-//     slider.style.transform = 'translate(-33.33%'
-//   };
-// });
-
+// MOVE SLIDER 
+let direction;
+arrowRight.addEventListener('click', function () {
+  // for (var i = sliderPartOne.children.length; i >= 0; i--) 
+  direction = "right";
+  slider.style.transform = 'translate(33.33%';
+  slider.style.transitionDuration = "1s"
+console.log(direction);
+});
+arrowLeft.addEventListener('click', function () {
+  // for (var i = sliderPartOne.children.length; i >= 0; i--)
+  direction = "left";
+  slider.style.transform = 'translate(-33.33%';
+  slider.style.transitionDuration = "1s"
+  console.log(direction);
+});
 
 // slider.addEventListener('transitionend', function () {
 //   slider.appendChild(slider.firstElementChild);
@@ -198,3 +214,20 @@ function fillPetCards () {
 //     slider.style.transition = 'all 0.4s';
 //   })
 // });
+slider.addEventListener('transitionend', function () {
+  if (direction === "right") {
+    slider.prepend(slider.lastElementChild);
+    slider.style.transition = 'none';
+    slider.style.transform = 'translate(0)';
+    setTimeout(function () {
+      slider.style.transition = 'all 1s';
+    })
+  } else if (direction === "left") {
+    slider.appendChild(slider.firstElementChild);
+    slider.style.transition = 'none';
+    slider.style.transform = 'translate(0)';
+    setTimeout(function () {
+      slider.style.transition = 'all 1s';
+    })
+  }
+});
