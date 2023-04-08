@@ -42,7 +42,6 @@ popup.addEventListener('click', (e) => {
 
 // SLIDER
 import { petsDescription } from "../../assets/pet-info.js"
-// console.log(petsDescription[6].name)
 
 const slider = document.querySelector('.slider-visible-wrapper')
 const sliderPartOne = document.querySelector('.slider-part-zero');
@@ -51,8 +50,6 @@ const sliderPartThree = document.querySelector('.slider-part-two');
 
 const arrowLeft = document.querySelector('.arrow-left');
 const arrowRight = document.querySelector('.arrow-right');
-// const animalCards = document.querySelectorAll('.card-container');
-// const animalCardsArray = [...document.querySelectorAll('.card-container')];
 
 //              RANDOMAIZER
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7];
@@ -62,14 +59,14 @@ const shuffleArr = (array) => {
 };
 
 let randomNumbersArr = shuffleArr(numbers);
-// console.log(randomNumbersArr);
+console.log(randomNumbersArr);
 
 // APPEND SLIDER ITEMS
 let petImagesOne;
 let petNamesOne;
 function addPetsCardsOne() {
   sliderPartOne.innerHTML = '';
-  for (let i = 3; i < 6; i++) {
+  for (let i = 0; i < 3; i++) {
     const sliderCard = document.createElement('div');
     sliderCard.className = "slider-card"
     sliderPartOne.append(sliderCard);
@@ -172,15 +169,8 @@ function addPetsCardsThree() {
   };
 };
 addPetsCardsThree();
-let currentArr;
-let theRestNumbersArr;
 
 function fillCardsContentOnLoad(n, arr) {
-  console.log(currentSliderPart);
-  console.log(slider.children[currentSliderPart]);
-
-  // if (currentSliderPart === 0) {
-  // console.log(slider.children[currentSliderPart + 2].previousElementSibling);
 
   slider.children[n].innerHTML = '';
   for (let i = 0; i < 3; i++) {
@@ -216,50 +206,66 @@ function fillCardsContentOnLoad(n, arr) {
 
 // MOVE SLIDER 
 
-let currentSliderPart = 1;
+
+
+let currentArr;
+let theRestNumbersArr;
+
+// function makeArray(arr) {
+//   currentArr = [];
+//   for (var i = 0; i < 3; i++) {
+//     currentArr.push(randomNumbersArr[i])
+//   }
+
+
+//   const s = new Set(currentArr);
+//   console.log(s);
+//   let newArr = arr.filter(e => !s.has(e));
+//   return newArr;
+// }
+
+// makeArray(randomNumbersArr);
+
+
 let direction;
-console.log(currentSliderPart);
-function makeArray(arr) {
-  currentArr = [];
-  for (var i = 0; i < 3; i++) {
-    currentArr.push(randomNumbersArr[i])
-  }
-  // console.log(currentArr);
-  const s = new Set(currentArr);
-  let newArr = arr.slice(3, 8).filter(e => !s.has(e));
-  return newArr;
-}
+let newArr5;
 
 arrowRight.addEventListener('click', function () {
-  console.log(currentSliderPart);
-  // for (var i = sliderPartOne.children.length; i >= 0; i--) 
-  if (currentSliderPart > 0) {
-    currentSliderPart--
-  } else { currentSliderPart = 2 }
-
-
+  currentArr = [];
+  if (newArr5 == undefined) {
+    for (var i = 0; i < 3; i++) {
+      currentArr.push(randomNumbersArr[i])
+    }
+  } else {
+    for (var i = 0; i < 3; i++) {
+      currentArr.push(newArr5[i])
+    }
+  }
+  const s = new Set(currentArr);
   randomNumbersArr = shuffleArr(numbers);
-  theRestNumbersArr = makeArray(randomNumbersArr);
-  fillCardsContentOnLoad(0, theRestNumbersArr);
-
-
-  // addPetsCardsOne();
-  // addPetsCardsThree();
+  newArr5 = randomNumbersArr.filter(e => !s.has(e));
+  fillCardsContentOnLoad(0, newArr5);
   direction = "right";
   slider.style.transform = 'translate(33.33%';
   slider.style.transitionDuration = "1s"
-  // console.log(randomNumbersArr);
 });
 
 arrowLeft.addEventListener('click', function () {
-  if (currentSliderPart < 2) {
-    currentSliderPart++
-  } else { currentSliderPart = 0 };
-
+  currentArr = [];
+  if (newArr5 == undefined) {
+    for (var i = 0; i < 3; i++) {
+      currentArr.push(randomNumbersArr[i])
+    }
+  } else {
+    for (var i = 0; i < 3; i++) {
+      currentArr.push(newArr5[i])
+    }
+  }
+  const s = new Set(currentArr);
   randomNumbersArr = shuffleArr(numbers);
-  theRestNumbersArr = makeArray(randomNumbersArr);
-  fillCardsContentOnLoad(2, theRestNumbersArr);
+  newArr5 = randomNumbersArr.filter(e => !s.has(e));
 
+  fillCardsContentOnLoad(2, newArr5);
   direction = "left";
   slider.style.transform = 'translate(-33.33%';
   slider.style.transitionDuration = "1s"
