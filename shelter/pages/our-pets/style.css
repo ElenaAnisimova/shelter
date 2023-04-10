@@ -242,6 +242,12 @@ button:active {
   column-gap: 40px;
   row-gap: 30px;
   flex-wrap: wrap;
+  display: none;
+  transition: all 0.4s;
+}
+
+.visible {
+  display: flex;
 }
 
 .slider-card {
@@ -272,10 +278,13 @@ button:active {
   background-color: #F1CDB3;
 }
 
-.next-page,
-.double-next-page {
+.active-button {
   background-color: #F6F6F6;
   border: 2px solid #F1CDB3;
+}
+
+.disabled-text {
+  color: #CDCDCD;
 }
 
 .arrow_form {
@@ -323,11 +332,13 @@ button:active {
   font-weight: 400;
 }
 
-.back-button span {
+.disabled-button-text {
   color: #CDCDCD;
 }
 
-.back-button:hover {
+.back-button:hover:disabled,
+.next-page:hover:disabled,
+.double-next-page:hover:disabled {
   background-color: #F6F6F6;
 }
 
