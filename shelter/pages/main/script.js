@@ -1,7 +1,4 @@
-
-
 // BURGER MENU
-
 
 const burgerOpenButton = document.querySelector('.burger-open-button');
 const openMenu = document.querySelector('.burger-menu-container');
@@ -38,8 +35,6 @@ popup.addEventListener('click', (e) => {
 // console.log("Итого: 100/100");
 
 
-
-
 // SLIDER
 import { petsDescription } from "../../assets/pet-info.js"
 
@@ -62,24 +57,34 @@ let randomNumbersArr = shuffleArr(numbers);
 console.log(randomNumbersArr);
 
 // APPEND SLIDER ITEMS
-let petImagesOne;
-let petNamesOne;
+
+let cardNumber;
 function addPetsCardsOne() {
   sliderPartOne.innerHTML = '';
-  for (let i = 0; i < 3; i++) {
+
+  if (window.innerWidth >= 1280) {
+    cardNumber = 3
+  }
+  if (window.innerWidth < 1279 && window.innerWidth >= 640) {
+    cardNumber = 2
+  }
+  if (window.innerWidth < 640) {
+    cardNumber = 1
+  }
+  for (let i = 0; i < cardNumber; i++) {
     const sliderCard = document.createElement('div');
-    sliderCard.className = "slider-card"
+    sliderCard.className = "slider-card";
     sliderPartOne.append(sliderCard);
 
-    petImagesOne = document.createElement('img');
-    petImagesOne.className = "pet-img"
-    sliderCard.append(petImagesOne);
-    petImagesOne.style.backgroundImage = `url(${(petsDescription[randomNumbersArr[i]].img)})`;
+    const petImage = document.createElement('img');
+    petImage.className = "pet-img"
+    sliderCard.append(petImage);
+    petImage.style.backgroundImage = `url(${(petsDescription[randomNumbersArr[i]].img)})`;
 
-    petNamesOne = document.createElement('div');
-    petNamesOne.className = "pet-name paragraph-20"
-    sliderCard.append(petNamesOne);
-    petNamesOne.innerHTML = petsDescription[randomNumbersArr[i]].name;
+    const petName = document.createElement('div');
+    petName.className = "pet-name paragraph-20"
+    sliderCard.append(petName);
+    petName.innerHTML = petsDescription[randomNumbersArr[i]].name;
 
     const formLearn = document.createElement('form');
     formLearn.className = "buttons form_learn-more"
@@ -93,18 +98,24 @@ function addPetsCardsOne() {
     spanLearn.className = "button-text"
     spanLearn.innerHTML = "Learn more"
     buttonLearn.append(spanLearn);
-
-    // const answerText = document.createElement('span');
-    // answerText.innerHTML = birdsData[levelCounter][i].name;
-    // answerOption.append(answerText);
   };
 };
 
 addPetsCardsOne();
 
 function addPetsCardsTwo() {
-  // sliderPartTwo.innerHTML = '';
-  for (let i = 0; i < 3; i++) {
+  sliderPartTwo.innerHTML = '';
+
+  if (window.innerWidth >= 1280) {
+    cardNumber = 3
+  }
+  if (window.innerWidth < 1279 && window.innerWidth >= 640) {
+    cardNumber = 2
+  }
+  if (window.innerWidth < 640) {
+    cardNumber = 1
+  }
+  for (let i = 0; i < cardNumber; i++) {
     const sliderCard = document.createElement('div');
     sliderCard.className = "slider-card"
     sliderPartTwo.append(sliderCard);
@@ -138,9 +149,19 @@ addPetsCardsTwo();
 
 function addPetsCardsThree() {
   sliderPartThree.innerHTML = '';
-  for (let i = 0; i < 3; i++) {
+  if (window.innerWidth >= 1280) {
+    cardNumber = 3
+  }
+  if (window.innerWidth < 1279 && window.innerWidth >= 640) {
+    cardNumber = 2
+  }
+  if (window.innerWidth < 640) {
+    cardNumber = 1
+  }
+
+  for (let i = 0; i < cardNumber; i++) {
     const sliderCard = document.createElement('div');
-    sliderCard.className = "slider-card"
+    sliderCard.className = "slider-card";
     sliderPartThree.append(sliderCard);
 
     const petImage = document.createElement('img');
@@ -170,11 +191,14 @@ function addPetsCardsThree() {
 };
 addPetsCardsThree();
 
+window.addEventListener('resize', addPetsCardsOne)
+window.addEventListener('resize', addPetsCardsTwo)
+window.addEventListener('resize', addPetsCardsThree)
+
 function fillCardsContentOnLoad(n, arr) {
-
   slider.children[n].innerHTML = '';
-  for (let i = 0; i < 3; i++) {
 
+  for (let i = 0; i < cardNumber; i++) {
     const sliderCard = document.createElement('div');
     sliderCard.className = "slider-card"
     slider.children[n].append(sliderCard);
@@ -204,68 +228,49 @@ function fillCardsContentOnLoad(n, arr) {
   }
 }
 
+
 // MOVE SLIDER 
 
-
-
 let currentArr;
-let theRestNumbersArr;
-
-// function makeArray(arr) {
-//   currentArr = [];
-//   for (var i = 0; i < 3; i++) {
-//     currentArr.push(randomNumbersArr[i])
-//   }
-
-
-//   const s = new Set(currentArr);
-//   console.log(s);
-//   let newArr = arr.filter(e => !s.has(e));
-//   return newArr;
-// }
-
-// makeArray(randomNumbersArr);
-
-
 let direction;
-let newArr5;
+let uniqueNumbersArr;
 
 arrowRight.addEventListener('click', function () {
   currentArr = [];
-  if (newArr5 == undefined) {
+  if (uniqueNumbersArr == undefined) {
     for (var i = 0; i < 3; i++) {
       currentArr.push(randomNumbersArr[i])
     }
   } else {
     for (var i = 0; i < 3; i++) {
-      currentArr.push(newArr5[i])
+      currentArr.push(uniqueNumbersArr[i])
     }
   }
   const s = new Set(currentArr);
   randomNumbersArr = shuffleArr(numbers);
-  newArr5 = randomNumbersArr.filter(e => !s.has(e));
-  fillCardsContentOnLoad(0, newArr5);
-  direction = "right";
+  uniqueNumbersArr = randomNumbersArr.filter(e => !s.has(e));
+
+  fillCardsContentOnLoad(0, uniqueNumbersArr);
   slider.style.transform = 'translate(33.33%';
   slider.style.transitionDuration = "1s"
+  direction = "right";
 });
 
 arrowLeft.addEventListener('click', function () {
   currentArr = [];
-  if (newArr5 == undefined) {
+  if (uniqueNumbersArr == undefined) {
     for (var i = 0; i < 3; i++) {
       currentArr.push(randomNumbersArr[i])
     }
   } else {
     for (var i = 0; i < 3; i++) {
-      currentArr.push(newArr5[i])
+      currentArr.push(uniqueNumbersArr[i])
     }
   }
   const s = new Set(currentArr);
   randomNumbersArr = shuffleArr(numbers);
-  newArr5 = randomNumbersArr.filter(e => !s.has(e));
-
-  fillCardsContentOnLoad(2, newArr5);
+  uniqueNumbersArr = randomNumbersArr.filter(e => !s.has(e));
+  fillCardsContentOnLoad(2, uniqueNumbersArr);
   direction = "left";
   slider.style.transform = 'translate(-33.33%';
   slider.style.transitionDuration = "1s"
@@ -275,18 +280,15 @@ arrowLeft.addEventListener('click', function () {
 slider.addEventListener('transitionend', function () {
   if (direction === "right") {
     slider.prepend(slider.lastElementChild);
-    slider.style.transition = 'none';
-    slider.style.transform = 'translate(0)';
-    setTimeout(function () {
-      slider.style.transition = 'all 1s';
-    })
-  } else if (direction === "left") {
-    slider.appendChild(slider.firstElementChild);
-    slider.style.transition = 'none';
-    slider.style.transform = 'translate(0)';
-    setTimeout(function () {
-      slider.style.transition = 'all 1s';
-    })
 
-  }
+  } else if (direction === "left") {
+    slider.appendChild(slider.firstElementChild)
+  };
+  slider.style.transition = 'none';
+  slider.style.transform = 'translate(0)';
+  setTimeout(function () {
+    slider.style.transition = 'all 1s';
+  })
 });
+
+

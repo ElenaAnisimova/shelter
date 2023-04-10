@@ -26,7 +26,7 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   padding: 0;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   width: 100%;
   background-image: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 }
@@ -54,7 +54,7 @@ a {
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .background-container {
@@ -400,7 +400,7 @@ button:active {
 
 .section-our-friends-wrapper {
   position: relative;
-
+  /* overflow-x: hidden; */
 }
 
 .our-friends-heading {
@@ -410,7 +410,7 @@ button:active {
 
 .slider-container {
   max-width: 990px;
-  /* max-width: 1200px; */
+  max-height: 439px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -418,7 +418,11 @@ button:active {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 60px;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
+  
+  /* overflow-y:auto !important; */
+
+  /* border: 1px solid red; */
 }
 
 .slider-visible-wrapper {
@@ -480,19 +484,6 @@ button:active {
   width: 270px;
   height: 270px;
   margin-bottom: 30px;
-}
-
-.kathrine.pet-img {
-  background: url(../../assets/pets-katrine.png);
-
-}
-
-.jennifer.pet-img {
-  background: url(../../assets/pets-jennifer.png);
-}
-
-.woody.pet-img {
-  background: url(../../assets/pets-woody.png);
 }
 
 .pet-name {
@@ -790,9 +781,13 @@ button:active {
   }
 
   /* SLIDER  */
-
-  .slider-card.woody {
+/* 
+  .slider-card.third-card {
     display: none;
+  } */
+
+  .slider-container {
+    max-width: 630px;
   }
 
   .help-item.vitamins {
@@ -909,13 +904,17 @@ button:active {
     min-width: 302px;
   }
 
-  .slider-images-container {
-    gap: 6.2vw;
-  }
-
   .slider-container {
     gap: 3vw;
   }
+  .slider-images-container {
+    gap: 6.2vw;
+  }
+  /* .arrow_form {
+    height: 52px;
+    position: absolute;
+    bottom: -71px;
+  } */
 }
 
 @media screen and (max-width: 785px) {
@@ -1019,13 +1018,15 @@ button:active {
   }
 
   .slider-container {
-    position: relative;
+    /* position: relative; */
     margin-bottom: 114px;
   }
 
   .arrow_form {
+    height: 52px;
     position: absolute;
     bottom: -71px;
+    top:auto
   }
 
   .arrow_form.left {
@@ -1195,13 +1196,13 @@ button:active {
   }
 
   .slider-container {
-    position: relative;
+    /* position: relative; */
     margin-bottom: 114px;
   }
 
   .arrow_form {
     position: absolute;
-    bottom: -71px;
+    bottom: 80px;
   }
 
   .arrow_form.left {
@@ -1350,18 +1351,14 @@ button:active {
     margin-right: 15vw;
   }
 
-
   .about-section-img {
     width: calc(47vw);
     min-width: 260px;
   }
 
-  .slider-card.jennifer {
-    display: none;
-  }
-
   .slider-container {
     justify-content: center;
+    max-width: 270px;
   }
 }
 
