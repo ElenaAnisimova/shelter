@@ -596,6 +596,7 @@ button:active {
   width: 500px;
   height: 500px;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .pop-up-text-container {

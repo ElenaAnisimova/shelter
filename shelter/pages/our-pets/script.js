@@ -144,32 +144,62 @@ function appendSliderPages() {
       const sliderCard = document.createElement('div');
       sliderCard.className = "slider-card";
       sliderPage.append(sliderCard);
-      if (animals2D[i][j].name === "Jennifer") {
-        sliderCard.className = "slider-card jennifer";
-      }
+
       if (animals2D[i][j].name === "Woody") {
         sliderCard.className = "slider-card woody";
+        const elements = document.querySelectorAll('.woody *');
+        elements.forEach((element) => {
+          element.classList.add('woody');
+        });
       }
       if (animals2D[i][j].name === "Charly") {
         sliderCard.className = "slider-card charly";
+        const elements = document.querySelectorAll('.charly *');
+        elements.forEach((element) => {
+          element.classList.add('charly');
+        });
       }
       if (animals2D[i][j].name === "Freddie") {
         sliderCard.className = "slider-card freddie";
+        const elements = document.querySelectorAll('.freddie *');
+        elements.forEach((element) => {
+          element.classList.add('freddie');
+        });
       }
       if (animals2D[i][j].name === "Jennifer") {
         sliderCard.className = "slider-card jennifer";
+        const elements = document.querySelectorAll('.jennifer *');
+        elements.forEach((element) => {
+          element.classList.add('jennifer');
+        });
       }
       if (animals2D[i][j].name === "Timmy") {
         sliderCard.className = "slider-card timmy";
+        const elements = document.querySelectorAll('.timmy *');
+        elements.forEach((element) => {
+          element.classList.add('timmy');
+        });
       }
       if (animals2D[i][j].name === "Scarlett") {
         sliderCard.className = "slider-card scarlett";
+        const elements = document.querySelectorAll('.scarlett *');
+        elements.forEach((element) => {
+          element.classList.add('scarlett');
+        });
       }
       if (animals2D[i][j].name === "Sophia") {
         sliderCard.className = "slider-card sophia";
+        const elements = document.querySelectorAll('.sophia *');
+        elements.forEach((element) => {
+          element.classList.add('sophia');
+        });
       }
       if (animals2D[i][j].name === "Katrine") {
         sliderCard.className = "slider-card katrine";
+        const elements = document.querySelectorAll('.katrine *');
+        elements.forEach((element) => {
+          element.classList.add('katrine');
+        });
       }
 
       const petImage = document.createElement('img');
@@ -188,6 +218,7 @@ function appendSliderPages() {
 
       const buttonLearn = document.createElement('button');
       buttonLearn.className = "button_learn-more button"
+      buttonLearn.type = "button";
       formLearn.append(buttonLearn);
 
       const spanLearn = document.createElement('span');
@@ -348,35 +379,49 @@ const openPopUpCont = document.querySelector('.pop-up-container');
 const popupBack = document.querySelector('.pop-up-back');
 
 
-popUpImage.style.background = `url(${(petsDescription[0].img)})`;
-popUpImage.style.backgroundSize = "cover";
-popUpImage.style.backgroundRepeat = "no-repeat";
-const allCards = document.querySelectorAll('.slider-card');
+
+
 let petItem;
 
-
-petType.innerHTML = petsDescription[0].type + " - " + petsDescription[0].breed;
-petInfo.innerHTML = petsDescription[0].description;
-age.innerHTML = petsDescription[0].age;
-vaccines.innerHTML = petsDescription[0].inoculations;
-diseases.innerHTML = petsDescription[0].diseases;
-parasites.innerHTML = petsDescription[0].parasites;
-// function definePet () {
-
-// }
-const sliderP = document.querySelector('.visible')
 slider.addEventListener('click', (e) => {
 
   console.log(event.target.classList);
-  if (e.target.classList.contains('timmy')) {
-    petItem = 6
-  } else petItem = 0;
 
+  if (e.target.classList.contains('jennifer')) {
+    petItem = 0;
+  } else if (e.target.classList.contains('sophia')) {
+    petItem = 1;
+  } else if (e.target.classList.contains('woody')) {
+    petItem = 2;
+  } else if (e.target.classList.contains('scarlett')) {
+    petItem = 3;
+  } else if (e.target.classList.contains('katrine')) {
+    petItem = 4;
+  } else if (e.target.classList.contains('timmy')) {
+    petItem = 5;
+  } else if (e.target.classList.contains('freddie')) {
+    petItem = 6;
+  } else if (e.target.classList.contains('charly')) {
+    petItem = 7;
+  }
+
+  // DEFINE POPUP PET 
+
+  popUpImage.style.backgroundSize = "cover";
+  popUpImage.style.backgroundRepeat = "no-repeat";
+  popUpImage.style.backgroundImage = `url(${(petsDescription[petItem].img)})`;
   popUpPetName.innerHTML = petsDescription[petItem].name;
+  petType.innerHTML = petsDescription[petItem].type + " - " + petsDescription[petItem].breed;
+  petInfo.innerHTML = petsDescription[petItem].description;
+  age.innerHTML = petsDescription[petItem].age;
+  vaccines.innerHTML = petsDescription[petItem].inoculations;
+  diseases.innerHTML = petsDescription[petItem].diseases;
+  parasites.innerHTML = petsDescription[petItem].parasites;
   openPopUpCont.classList.toggle('appear');
   popupBack.classList.toggle('appearing-block');
   document.body.classList.toggle('no-scroll');
 });
+
 closePopup.addEventListener('click', () => {
   openPopUpCont.classList.toggle('appear');
   popupBack.classList.toggle('appearing-block');

@@ -91,7 +91,8 @@ function addPetsCardsOne() {
     sliderCard.append(formLearn);
 
     const buttonLearn = document.createElement('button');
-    buttonLearn.className = "button_learn-more button"
+    buttonLearn.className = "button_learn-more button";
+    buttonLearn.type = "button";
     formLearn.append(buttonLearn);
 
     const spanLearn = document.createElement('span');
