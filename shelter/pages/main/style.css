@@ -424,7 +424,7 @@ button:active {
 }
 
 .slider-visible-wrapper {
-  /* width: 300%; */
+  /* height:  */
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

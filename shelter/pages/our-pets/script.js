@@ -125,7 +125,7 @@ let pageNumber;
 function appendSliderPages() {
   // if (window.innerWidth >= 1271) {
   pageNumber = 6;
-  cardNumber = 8;
+  cardNumber = 48;
   // }
   // if (window.innerWidth < 1270 && window.innerWidth >= 640) {
   //   pageNumber = 8;
@@ -136,96 +136,96 @@ function appendSliderPages() {
   //   cardNumber = 3;
   // }
 
-  for (let i = 0; i < pageNumber; i++) {
-    const sliderPage = document.createElement('div');
-    sliderPage.className = "slider-page";
-    slider.append(sliderPage);
-    for (let j = 0; j < cardNumber; j++) {
-      const sliderCard = document.createElement('div');
-      sliderCard.className = "slider-card";
-      sliderPage.append(sliderCard);
+  // for (let i = 0; i < pageNumber; i++) {
+  // const sliderPage = document.createElement('div');
+  // sliderPage.className = "slider-page";
+  // slider.append(sliderPage);
+  for (let j = 0; j < cardNumber; j++) {
+    const sliderCard = document.createElement('div');
+    sliderCard.className = "slider-card";
+    slider.append(sliderCard);
 
-      if (animals2D[i][j].name === "Woody") {
-        sliderCard.className = "slider-card woody";
-        const elements = document.querySelectorAll('.woody *');
-        elements.forEach((element) => {
-          element.classList.add('woody');
-        });
-      }
-      if (animals2D[i][j].name === "Charly") {
-        sliderCard.className = "slider-card charly";
-        const elements = document.querySelectorAll('.charly *');
-        elements.forEach((element) => {
-          element.classList.add('charly');
-        });
-      }
-      if (animals2D[i][j].name === "Freddie") {
-        sliderCard.className = "slider-card freddie";
-        const elements = document.querySelectorAll('.freddie *');
-        elements.forEach((element) => {
-          element.classList.add('freddie');
-        });
-      }
-      if (animals2D[i][j].name === "Jennifer") {
-        sliderCard.className = "slider-card jennifer";
-        const elements = document.querySelectorAll('.jennifer *');
-        elements.forEach((element) => {
-          element.classList.add('jennifer');
-        });
-      }
-      if (animals2D[i][j].name === "Timmy") {
-        sliderCard.className = "slider-card timmy";
-        const elements = document.querySelectorAll('.timmy *');
-        elements.forEach((element) => {
-          element.classList.add('timmy');
-        });
-      }
-      if (animals2D[i][j].name === "Scarlett") {
-        sliderCard.className = "slider-card scarlett";
-        const elements = document.querySelectorAll('.scarlett *');
-        elements.forEach((element) => {
-          element.classList.add('scarlett');
-        });
-      }
-      if (animals2D[i][j].name === "Sophia") {
-        sliderCard.className = "slider-card sophia";
-        const elements = document.querySelectorAll('.sophia *');
-        elements.forEach((element) => {
-          element.classList.add('sophia');
-        });
-      }
-      if (animals2D[i][j].name === "Katrine") {
-        sliderCard.className = "slider-card katrine";
-        const elements = document.querySelectorAll('.katrine *');
-        elements.forEach((element) => {
-          element.classList.add('katrine');
-        });
-      }
-
-      const petImage = document.createElement('img');
-      petImage.className = "pet-img"
-      sliderCard.append(petImage);
-      petImage.style.backgroundImage = `url(${(animals2D[i][j].img)})`;
-
-      const petName = document.createElement('div');
-      petName.className = "pet-name paragraph-20"
-      sliderCard.append(petName);
-      petName.innerHTML = animals2D[i][j].name;
-
-      const formLearn = document.createElement('form');
-      formLearn.className = "buttons form_learn-more"
-      sliderCard.append(formLearn);
-
-      const buttonLearn = document.createElement('button');
-      buttonLearn.className = "button_learn-more button"
-      buttonLearn.type = "button";
-      formLearn.append(buttonLearn);
-
-      const spanLearn = document.createElement('span');
-      spanLearn.className = "button-text"
-      spanLearn.innerHTML = "Learn more"
-      buttonLearn.append(spanLearn);
+    if (animals[j].name === "Woody") {
+      sliderCard.className = "slider-card woody";
+      const elements = document.querySelectorAll('.woody *');
+      elements.forEach((element) => {
+        element.classList.add('woody');
+      });
     }
+    if (animals[j].name === "Charly") {
+      sliderCard.className = "slider-card charly";
+      const elements = document.querySelectorAll('.charly *');
+      elements.forEach((element) => {
+        element.classList.add('charly');
+      });
+    }
+    if (animals[j].name === "Freddie") {
+      sliderCard.className = "slider-card freddie";
+      const elements = document.querySelectorAll('.freddie *');
+      elements.forEach((element) => {
+        element.classList.add('freddie');
+      });
+    }
+    if (animals[j].name === "Jennifer") {
+      sliderCard.className = "slider-card jennifer";
+      const elements = document.querySelectorAll('.jennifer *');
+      elements.forEach((element) => {
+        element.classList.add('jennifer');
+      });
+    }
+    if (animals[j].name === "Timmy") {
+      sliderCard.className = "slider-card timmy";
+      const elements = document.querySelectorAll('.timmy *');
+      elements.forEach((element) => {
+        element.classList.add('timmy');
+      });
+    }
+    if (animals[j].name === "Scarlett") {
+      sliderCard.className = "slider-card scarlett";
+      const elements = document.querySelectorAll('.scarlett *');
+      elements.forEach((element) => {
+        element.classList.add('scarlett');
+      });
+    }
+    if (animals[j].name === "Sophia") {
+      sliderCard.className = "slider-card sophia";
+      const elements = document.querySelectorAll('.sophia *');
+      elements.forEach((element) => {
+        element.classList.add('sophia');
+      });
+    }
+    if (animals[j].name === "Katrine") {
+      sliderCard.className = "slider-card katrine";
+      const elements = document.querySelectorAll('.katrine *');
+      elements.forEach((element) => {
+        element.classList.add('katrine');
+      });
+    }
+
+    const petImage = document.createElement('img');
+    petImage.className = "pet-img"
+    sliderCard.append(petImage);
+    petImage.style.backgroundImage = `url(${(animals[j].img)})`;
+
+    const petName = document.createElement('div');
+    petName.className = "pet-name paragraph-20"
+    sliderCard.append(petName);
+    petName.innerHTML = animals[j].name;
+
+    const formLearn = document.createElement('form');
+    formLearn.className = "buttons form_learn-more"
+    sliderCard.append(formLearn);
+
+    const buttonLearn = document.createElement('button');
+    buttonLearn.className = "button_learn-more button"
+    buttonLearn.type = "button";
+    formLearn.append(buttonLearn);
+
+    const spanLearn = document.createElement('span');
+    spanLearn.className = "button-text"
+    spanLearn.innerHTML = "Learn more"
+    buttonLearn.append(spanLearn);
+    // }
   }
 }
 appendSliderPages();
@@ -235,7 +235,8 @@ appendSliderPages();
 
 // FIRST PAGE DEFAULT SETTINGS 
 let i = 0;
-slider.children[i].classList.add('visible');
+let page;
+// slider.children[i].classList.add('visible');
 currentPage.innerHTML = i + 1;
 nextPageButton.classList.add("active-button");
 lastPageButton.classList.add("active-button");
@@ -244,13 +245,33 @@ for (const span of backButtonsText) {
 };
 
 // CHANGE PAGES FUNCTIONS 
-
+let position;
+function defineSliderStep() {
+  if (window.innerWidth >= 1268) {
+    position = 1233.3 * i;
+    page = 5;
+  }
+  if (window.innerWidth < 1268 && window.innerWidth >= 640) {
+    position = 615 * i;
+    page = 7;
+  }
+  if (window.innerWidth < 640) {
+    position = 307.5 * i;
+    page = 15;
+  }
+  // console.log(position);
+  return position
+}
+window.addEventListener('resize', defineSliderStep)
+defineSliderStep();
 function nextPage() {
-  slider.children[i].classList.remove('visible');
+
   i++;
-  slider.children[i].classList.add('visible');
+
+  defineSliderStep();
+  slider.style.transform = 'translate(' + -position + 'px';
   currentPage.innerHTML = i + 1;
-  if (i >= 5) {
+  if (i >= page) {
     lastPageButton.disabled = true;
     nextPageButton.disabled = true;
     lastPageButton.classList.remove("active-button");
@@ -272,14 +293,14 @@ function nextPage() {
 
 nextPageButton.addEventListener('click', function () {
   nextPage();
-  console.log(i);
 });
 
 function previousPage() {
-  slider.children[i].classList.remove('visible');
   i--;
-  slider.children[i].classList.add('visible');
+  console.log(i);
   currentPage.innerHTML = i + 1;
+  defineSliderStep();
+  slider.style.transform = 'translate(' + -position + 'px';
   if (i < 1) {
     firstPageButton.disabled = true;
     previousPageButton.disabled = true;
@@ -289,7 +310,7 @@ function previousPage() {
       span.classList.add("disabled-button-text")
     }
   }
-  if (i < 5) {
+  if (i < page) {
     lastPageButton.disabled = false;
     nextPageButton.disabled = false;
     lastPageButton.classList.add("active-button");
@@ -302,13 +323,15 @@ function previousPage() {
 
 previousPageButton.addEventListener('click', function () {
   previousPage();
-  console.log(i);
 });
 
+
+
+
 function lastPage() {
-  slider.children[i].classList.remove('visible');
-  i = 5;
-  slider.children[i].classList.add('visible');
+  i = page;
+  defineSliderStep();
+  slider.style.transform = 'translate(' + -position + 'px';
   currentPage.innerHTML = i + 1;
 
   firstPageButton.disabled = false;
@@ -334,9 +357,9 @@ lastPageButton.addEventListener('click', function () {
 });
 
 function firstPage() {
-  slider.children[i].classList.remove('visible');
   i = 0;
-  slider.children[i].classList.add('visible');
+  defineSliderStep();
+  slider.style.transform = 'translate(' + -position + 'px';
   currentPage.innerHTML = i + 1;
 
   firstPageButton.disabled = true;

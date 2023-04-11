@@ -24,7 +24,7 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   padding: 0;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   width: 100%;
 }
 
@@ -324,19 +324,25 @@ button:active {
 
 .slider-container {
   max-width: 1200px;
+  width: 1200px;
   margin-bottom: 60px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
+
   overflow: hidden;
 }
 
 .slider-visible-wrapper {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  flex-direction: column;
   flex-shrink: 0;
-  gap: 40px;
+  column-gap: 40px;
+  row-gap: 30px;
+  height: 910px;
+  max-height: 910px;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 
 .slider-page {
@@ -347,8 +353,9 @@ button:active {
   column-gap: 40px;
   row-gap: 30px;
   flex-wrap: wrap;
-  display: none;
+  /* display: none; */
   transition: all 0.4s;
+
 }
 
 .visible {
@@ -797,14 +804,20 @@ button:active {
 }
 
 @media screen and (max-width: 1268px) {
+
   .slider-container {
-    max-width: 1199px;
+    max-width: 580px;
+    width: 580px;
+    margin-bottom: 40px;
   }
 
-  /* .slider-card.scarlett,
-  .slider-card.freddie {
-    display: none;
-  } */
+  .slider-visible-wrapper {
+    max-height: 1380px;
+  height: 1380px;
+    column-gap: 40px;
+    row-gap: 30px;
+  
+  }
 
 }
 
@@ -869,10 +882,7 @@ button:active {
     padding-bottom: 76px;
   }
 
-  .slider-container {
-    max-width: 768px;
-    margin-bottom: 40px;
-  }
+
 
   .our-friends-heading {
     margin-bottom: 30px;
