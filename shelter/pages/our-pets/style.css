@@ -648,7 +648,7 @@ button:active {
   width: 52px;
   height: 52px;
   border-radius: 50px;
-  background-color: none;
+
   border: 2px solid #F1CDB3;
   font-size: 39px;
   top: -48px;
@@ -656,6 +656,11 @@ button:active {
   display: flex;
   justify-content: center;
   cursor: pointer;
+  transition: 0.4s;
+}
+.pop-up-close-button:hover {
+  background-color: #cdcdcda1;
+  transform: rotate(45deg);
 }
 
 .cross-pop-up {
