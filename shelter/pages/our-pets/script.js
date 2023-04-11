@@ -365,7 +365,6 @@ firstPageButton.addEventListener('click', function () {
 
 // POP UP 
 
-const section = document.querySelector(".section-our-friends");
 const popUpImage = document.querySelector(".pop-up-image");
 const popUpPetName = document.querySelector(".pop-up-pet-name");
 const petType = document.querySelector(".pet-type");
@@ -380,13 +379,9 @@ const popupBack = document.querySelector('.pop-up-back');
 
 
 
-
 let petItem;
 
 slider.addEventListener('click', (e) => {
-
-  console.log(event.target.classList);
-
   if (e.target.classList.contains('jennifer')) {
     petItem = 0;
   } else if (e.target.classList.contains('sophia')) {

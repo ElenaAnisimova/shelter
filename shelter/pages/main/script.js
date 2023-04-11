@@ -56,6 +56,67 @@ const shuffleArr = (array) => {
 let randomNumbersArr = shuffleArr(numbers);
 console.log(randomNumbersArr);
 
+
+function definePopupPet() {
+  if (petsDescription[randomNumbersArr[i]].name === "Woody") {
+    sliderCard.className = "slider-card woody";
+    const elements = document.querySelectorAll('.woody *');
+    elements.forEach((element) => {
+      element.classList.add('woody');
+    });
+  }
+  if (petsDescription[randomNumbersArr[i]].name === "Charly") {
+    sliderCard.className = "slider-card charly";
+    const elements = document.querySelectorAll('.charly *');
+    elements.forEach((element) => {
+      element.classList.add('charly');
+    });
+  }
+  if (petsDescription[randomNumbersArr[i]].name === "Freddie") {
+    sliderCard.className = "slider-card freddie";
+    const elements = document.querySelectorAll('.freddie *');
+    elements.forEach((element) => {
+      element.classList.add('freddie');
+    });
+  }
+  if (petsDescription[randomNumbersArr[i]].name === "Jennifer") {
+    sliderCard.className = "slider-card jennifer";
+    const elements = document.querySelectorAll('.jennifer *');
+    elements.forEach((element) => {
+      element.classList.add('jennifer');
+    });
+  }
+  if (petsDescription[randomNumbersArr[i]].name === "Timmy") {
+    sliderCard.className = "slider-card timmy";
+    const elements = document.querySelectorAll('.timmy *');
+    elements.forEach((element) => {
+      element.classList.add('timmy');
+    });
+  }
+  if (petsDescription[randomNumbersArr[i]].name === "Scarlett") {
+    sliderCard.className = "slider-card scarlett";
+    const elements = document.querySelectorAll('.scarlett *');
+    elements.forEach((element) => {
+      element.classList.add('scarlett');
+    });
+  }
+  if (petsDescription[randomNumbersArr[i]].name === "Sophia") {
+    sliderCard.className = "slider-card sophia";
+    const elements = document.querySelectorAll('.sophia *');
+    elements.forEach((element) => {
+      element.classList.add('sophia');
+    });
+  }
+  if (petsDescription[randomNumbersArr[i]].name === "Katrine") {
+    sliderCard.className = "slider-card katrine";
+    const elements = document.querySelectorAll('.katrine *');
+    elements.forEach((element) => {
+      element.classList.add('katrine');
+    });
+  }
+}
+// definePopupPet();
+
 // APPEND SLIDER ITEMS
 
 let cardNumber;
@@ -99,6 +160,59 @@ function addPetsCardsOne() {
     spanLearn.className = "button-text"
     spanLearn.innerHTML = "Learn more"
     buttonLearn.append(spanLearn);
+
+    if (petsDescription[randomNumbersArr[i]].name === "Woody") {
+      sliderCard.className = "slider-card woody";
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Charly") {
+      sliderCard.className = "slider-card charly";
+      const elements = document.querySelectorAll('.charly *');
+      elements.forEach((element) => {
+        element.classList.add('charly');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Freddie") {
+      sliderCard.className = "slider-card freddie";
+      const elements = document.querySelectorAll('.freddie *');
+      elements.forEach((element) => {
+        element.classList.add('freddie');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Jennifer") {
+      sliderCard.className = "slider-card jennifer";
+      const elements = document.querySelectorAll('.jennifer *');
+      elements.forEach((element) => {
+        element.classList.add('jennifer');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Timmy") {
+      sliderCard.className = "slider-card timmy";
+      const elements = document.querySelectorAll('.timmy *');
+      elements.forEach((element) => {
+        element.classList.add('timmy');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Scarlett") {
+      sliderCard.className = "slider-card scarlett";
+      const elements = document.querySelectorAll('.scarlett *');
+      elements.forEach((element) => {
+        element.classList.add('scarlett');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Sophia") {
+      sliderCard.className = "slider-card sophia";
+      const elements = document.querySelectorAll('.sophia *');
+      elements.forEach((element) => {
+        element.classList.add('sophia');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Katrine") {
+      sliderCard.className = "slider-card katrine";
+      const elements = document.querySelectorAll('.katrine *');
+      elements.forEach((element) => {
+        element.classList.add('katrine');
+      });
+    }
   };
 };
 
@@ -117,9 +231,12 @@ function addPetsCardsTwo() {
     cardNumber = 1
   }
   for (let i = 0; i < cardNumber; i++) {
+    randomNumbersArr[i]
     const sliderCard = document.createElement('div');
-    sliderCard.className = "slider-card"
+    sliderCard.className = "slider-card";
+
     sliderPartTwo.append(sliderCard);
+
 
     const petImage = document.createElement('img');
     petImage.className = "pet-img"
@@ -136,13 +253,66 @@ function addPetsCardsTwo() {
     sliderCard.append(formLearn);
 
     const buttonLearn = document.createElement('button');
-    buttonLearn.className = "button_learn-more button"
+    buttonLearn.className = "button_learn-more button";
+    buttonLearn.type = "button";
     formLearn.append(buttonLearn);
 
     const spanLearn = document.createElement('span');
     spanLearn.className = "button-text"
     spanLearn.innerHTML = "Learn more"
     buttonLearn.append(spanLearn);
+    if (petsDescription[randomNumbersArr[i]].name === "Woody") {
+      sliderCard.className = "slider-card woody";
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Charly") {
+      sliderCard.className = "slider-card charly";
+      const elements = document.querySelectorAll('.charly *');
+      elements.forEach((element) => {
+        element.classList.add('charly');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Freddie") {
+      sliderCard.className = "slider-card freddie";
+      const elements = document.querySelectorAll('.freddie *');
+      elements.forEach((element) => {
+        element.classList.add('freddie');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Jennifer") {
+      sliderCard.className = "slider-card jennifer";
+      const elements = document.querySelectorAll('.jennifer *');
+      elements.forEach((element) => {
+        element.classList.add('jennifer');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Timmy") {
+      sliderCard.className = "slider-card timmy";
+      const elements = document.querySelectorAll('.timmy *');
+      elements.forEach((element) => {
+        element.classList.add('timmy');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Scarlett") {
+      sliderCard.className = "slider-card scarlett";
+      const elements = document.querySelectorAll('.scarlett *');
+      elements.forEach((element) => {
+        element.classList.add('scarlett');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Sophia") {
+      sliderCard.className = "slider-card sophia";
+      const elements = document.querySelectorAll('.sophia *');
+      elements.forEach((element) => {
+        element.classList.add('sophia');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Katrine") {
+      sliderCard.className = "slider-card katrine";
+      const elements = document.querySelectorAll('.katrine *');
+      elements.forEach((element) => {
+        element.classList.add('katrine');
+      });
+    }
   };
 };
 addPetsCardsTwo();
@@ -180,7 +350,8 @@ function addPetsCardsThree() {
     sliderCard.append(formLearn);
 
     const buttonLearn = document.createElement('button');
-    buttonLearn.className = "button_learn-more button"
+    buttonLearn.className = "button_learn-more button";
+    buttonLearn.type = "button";
     formLearn.append(buttonLearn);
 
     const spanLearn = document.createElement('span');
@@ -188,6 +359,58 @@ function addPetsCardsThree() {
     spanLearn.innerHTML = "Learn more"
     buttonLearn.append(spanLearn);
 
+    if (petsDescription[randomNumbersArr[i]].name === "Woody") {
+      sliderCard.className = "slider-card woody";
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Charly") {
+      sliderCard.className = "slider-card charly";
+      const elements = document.querySelectorAll('.charly *');
+      elements.forEach((element) => {
+        element.classList.add('charly');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Freddie") {
+      sliderCard.className = "slider-card freddie";
+      const elements = document.querySelectorAll('.freddie *');
+      elements.forEach((element) => {
+        element.classList.add('freddie');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Jennifer") {
+      sliderCard.className = "slider-card jennifer";
+      const elements = document.querySelectorAll('.jennifer *');
+      elements.forEach((element) => {
+        element.classList.add('jennifer');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Timmy") {
+      sliderCard.className = "slider-card timmy";
+      const elements = document.querySelectorAll('.timmy *');
+      elements.forEach((element) => {
+        element.classList.add('timmy');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Scarlett") {
+      sliderCard.className = "slider-card scarlett";
+      const elements = document.querySelectorAll('.scarlett *');
+      elements.forEach((element) => {
+        element.classList.add('scarlett');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Sophia") {
+      sliderCard.className = "slider-card sophia";
+      const elements = document.querySelectorAll('.sophia *');
+      elements.forEach((element) => {
+        element.classList.add('sophia');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Katrine") {
+      sliderCard.className = "slider-card katrine";
+      const elements = document.querySelectorAll('.katrine *');
+      elements.forEach((element) => {
+        element.classList.add('katrine');
+      });
+    }
   };
 };
 addPetsCardsThree();
@@ -201,7 +424,7 @@ function fillCardsContentOnLoad(n, arr) {
 
   for (let i = 0; i < cardNumber; i++) {
     const sliderCard = document.createElement('div');
-    sliderCard.className = "slider-card"
+    sliderCard.className = "slider-card";
     slider.children[n].append(sliderCard);
 
     const petImage = document.createElement('img');
@@ -226,6 +449,62 @@ function fillCardsContentOnLoad(n, arr) {
     spanLearn.className = "button-text"
     spanLearn.innerHTML = "Learn more"
     buttonLearn.append(spanLearn);
+    if (petsDescription[randomNumbersArr[i]].name === "Woody") {
+      sliderCard.className = "slider-card woody";
+      const elements = document.querySelectorAll('.woody *');
+      elements.forEach((element) => {
+        element.classList.add('woody');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Charly") {
+      sliderCard.className = "slider-card charly";
+      const elements = document.querySelectorAll('.charly *');
+      elements.forEach((element) => {
+        element.classList.add('charly');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Freddie") {
+      sliderCard.className = "slider-card freddie";
+      const elements = document.querySelectorAll('.freddie *');
+      elements.forEach((element) => {
+        element.classList.add('freddie');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Jennifer") {
+      sliderCard.className = "slider-card jennifer";
+      const elements = document.querySelectorAll('.jennifer *');
+      elements.forEach((element) => {
+        element.classList.add('jennifer');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Timmy") {
+      sliderCard.className = "slider-card timmy";
+      const elements = document.querySelectorAll('.timmy *');
+      elements.forEach((element) => {
+        element.classList.add('timmy');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Scarlett") {
+      sliderCard.className = "slider-card scarlett";
+      const elements = document.querySelectorAll('.scarlett *');
+      elements.forEach((element) => {
+        element.classList.add('scarlett');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Sophia") {
+      sliderCard.className = "slider-card sophia";
+      const elements = document.querySelectorAll('.sophia *');
+      elements.forEach((element) => {
+        element.classList.add('sophia');
+      });
+    }
+    if (petsDescription[randomNumbersArr[i]].name === "Katrine") {
+      sliderCard.className = "slider-card katrine";
+      const elements = document.querySelectorAll('.katrine *');
+      elements.forEach((element) => {
+        element.classList.add('katrine');
+      });
+    }
   }
 }
 
@@ -291,5 +570,77 @@ slider.addEventListener('transitionend', function () {
     slider.style.transition = 'all 1s';
   })
 });
+
+
+// POP UP 
+
+const popUpImage = document.querySelector(".pop-up-image");
+const popUpPetName = document.querySelector(".pop-up-pet-name");
+const petType = document.querySelector(".pet-type");
+const petInfo = document.querySelector(".pet-desription");
+const age = document.querySelector(".pet-age.popup-list-item");
+const vaccines = document.querySelector(".pet-vaccines.popup-list-item");
+const diseases = document.querySelector(".pet-diseases.popup-list-item");
+const parasites = document.querySelector(".pet-parasites.popup-list-item");
+const closePopup = document.querySelector(".pop-up-close-button");
+const openPopUpCont = document.querySelector('.pop-up-container');
+const popupBack = document.querySelector('.pop-up-back');
+
+
+
+let petItem;
+
+slider.addEventListener('click', (e) => {
+  // console.log(event.target.classList)
+  if (e.target.classList.contains('jennifer')) {
+    petItem = 0;
+  } else if (e.target.classList.contains('sophia')) {
+    petItem = 1;
+  } else if (e.target.classList.contains('woody')) {
+    petItem = 2;
+  } else if (e.target.classList.contains('scarlett')) {
+    petItem = 3;
+  } else if (e.target.classList.contains('katrine')) {
+    petItem = 4;
+  } else if (e.target.classList.contains('timmy')) {
+    petItem = 5;
+  } else if (e.target.classList.contains('freddie')) {
+    petItem = 6;
+  } else if (e.target.classList.contains('charly')) {
+    petItem = 7;
+  }
+  console.log(petItem);
+  // DEFINE POPUP PET 
+
+  popUpImage.style.backgroundSize = "cover";
+  popUpImage.style.backgroundRepeat = "no-repeat";
+  popUpPetName.innerHTML = petsDescription[petItem].name;
+  popUpImage.style.backgroundImage = `url(${(petsDescription[petItem].img)})`;
+  petType.innerHTML = petsDescription[petItem].type + " - " + petsDescription[petItem].breed;
+  petInfo.innerHTML = petsDescription[petItem].description;
+  age.innerHTML = petsDescription[petItem].age;
+  vaccines.innerHTML = petsDescription[petItem].inoculations;
+  diseases.innerHTML = petsDescription[petItem].diseases;
+  parasites.innerHTML = petsDescription[petItem].parasites;
+  openPopUpCont.classList.toggle('appear');
+  popupBack.classList.toggle('appearing-block');
+  document.body.classList.toggle('no-scroll');
+});
+
+closePopup.addEventListener('click', () => {
+  openPopUpCont.classList.toggle('appear');
+  popupBack.classList.toggle('appearing-block');
+  document.body.classList.toggle('no-scroll');
+});
+
+
+
+popupBack.addEventListener('click', (e) => {
+  if (e.target.classList.contains('pop-up-back')) {
+    openPopUpCont.classList.toggle('appear');
+    popupBack.classList.toggle('appearing-block');
+    document.body.classList.toggle('no-scroll');
+  }
+})
 
 
