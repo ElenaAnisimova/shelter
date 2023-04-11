@@ -39,6 +39,7 @@ a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  font-family: inherit;
 }
 
 .button {
@@ -155,6 +156,7 @@ a {
   border-bottom: 3px solid #F1CDB3;
   cursor: auto;
 }
+
 /* BURGER  */
 
 .burger-menu-container {
@@ -258,6 +260,7 @@ a {
   height: 2px;
   background-color: #F1CDB3;
 }
+
 .burger-icon-wrapper {
   display: flex;
   flex-direction: column;
@@ -314,7 +317,6 @@ button:active {
   letter-spacing: 0.06em;
 }
 
-/* ИСПРАВИТЬ РАЗМЕР ШРИФТА ЩОБ НЕ ПРЫШАЛ */
 .our-friends-heading {
   margin-bottom: 60px;
   text-align: center;
@@ -326,6 +328,7 @@ button:active {
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  overflow: hidden;
 }
 
 .slider-visible-wrapper {
@@ -659,6 +662,7 @@ button:active {
   cursor: pointer;
   transition: 0.4s;
 }
+
 .pop-up-close-button:hover {
   background-color: #cdcdcda1;
   transform: rotate(45deg);
