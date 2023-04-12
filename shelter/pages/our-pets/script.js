@@ -111,14 +111,14 @@ function makeRandomArrays() {
 
   let lotteryNumbers = [0, 1];
   let numForRandom = shuffleArr(lotteryNumbers)[0];
-  console.log(numForRandom);
+
   if (numForRandom == 0) {
 
     randomArrays.push(arr1, arr2, arr3, arr4, arr5, arr6, arr7, arr8, arr9, arr10, arr11, arr12);
   } else if (numForRandom == 1) {
     randomArrays.push(arr1_1, arr2_1, arr3_1, arr4_1, arr5_1, arr6_1, arr7_1, arr8_1, arr9_1, arr10_1, arr11_1, arr12_1)
   }
-  console.log(randomArrays.flat());
+
   for (let i = 0; i < 48; i++) {
     animalsArray.push(petsDescription[randomArrays.flat()[i]])
   };
@@ -127,19 +127,6 @@ function makeRandomArrays() {
 }
 const animals = makeRandomArrays();
 console.log(animals);
-
-
-function slice(array) {
-
-  const chunkSize = 8;
-  let r = [];
-  for (let i = 0; i < array.length; i += chunkSize) {
-    r.push(array.slice(i, i + chunkSize));
-  }
-  return r;
-}
-const animals2D = slice(animals);
-// console.log(animals2D);
 
 
 // APPEND PAGES 
