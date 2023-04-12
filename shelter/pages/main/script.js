@@ -531,7 +531,7 @@ arrowRight.addEventListener('click', function () {
   const s = new Set(currentArr);
   randomNumbersArr = shuffleArr(numbers);
   uniqueNumbersArr = randomNumbersArr.filter(e => !s.has(e));
-console.log(uniqueNumbersArr);
+  console.log(uniqueNumbersArr);
   fillCardsContentOnLoad(0, uniqueNumbersArr);
   slider.style.transform = 'translate(33.33%';
   slider.style.transitionDuration = "1s"

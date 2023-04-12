@@ -47,22 +47,34 @@ const nextButtonsText = document.querySelectorAll('.next-buttons-text');
 
 // RANDOMIZER 
 
-const numbers1 = [0, 1, 2, 3, 4, 5, 6, 7];
-const numbers2 = [0, 1, 2, 3, 4, 5, 6, 7];
-const numbers3 = [0, 1, 2, 3, 4, 5, 6, 7];
-const numbers4 = [0, 1, 2, 3, 4, 5, 6, 7];
-const numbers5 = [0, 1, 2, 3, 4, 5, 6, 7];
-const numbers6 = [0, 1, 2, 3, 4, 5, 6, 7];
+const numbers1 = [0, 1, 2, 3]
+const numbers2 = [4, 5, 6, 7];
+const numbers1_1 = [0, 1, 2, 3]
+const numbers2_1 = [4, 5, 6, 7];
+const numbers1_2 = [0, 1, 2, 3]
+const numbers2_2 = [4, 5, 6, 7];
 
-const numbers61 = [0, 1, 2, 3, 4, 5];
-const numbers62 = [6, 7, 0, 1, 2, 3];
-const numbers63 = [4, 5, 6, 7, 0, 1];
-const numbers64 = [2, 3, 4, 5, 6, 7];
-const numbers65 = [0, 1, 2, 3, 4, 5];
-const numbers66 = [6, 7, 0, 1, 2, 3];
-const numbers67 = [4, 5, 6, 7, 0, 1];
-const numbers68 = [2, 3, 4, 5, 6, 7];
+const numbers1_3 = [0, 1, 4, 7]
+const numbers2_3 = [2, 3, 5, 6];
+const numbers1_4 = [0, 1, 4, 7]
+const numbers2_4 = [2, 3, 5, 6];
+const numbers1_5 = [0, 1, 4, 7]
+const numbers2_5 = [2, 3, 5, 6];
 
+
+const numbers3 = [5, 6, 7, 3]
+const numbers4 = [1, 2, 0, 4];
+const numbers3_1 = [5, 6, 7, 3]
+const numbers4_1 = [1, 2, 0, 4];
+const numbers3_2 = [5, 6, 7, 3]
+const numbers4_2 = [1, 2, 0, 4];
+
+const numbers3_3 = [0, 1, 2, 5]
+const numbers4_3 = [4, 3, 7, 6];
+const numbers3_4 = [0, 1, 2, 5]
+const numbers4_4 = [4, 3, 7, 6];
+const numbers3_5 = [0, 1, 2, 5]
+const numbers4_5 = [4, 3, 7, 6];
 
 const shuffleArr = (array) => {
   return array.sort(() => 0.5 - Math.random());
@@ -71,41 +83,54 @@ const shuffleArr = (array) => {
 let randomArrays = [];
 function makeRandomArrays() {
   let animalsArray = [];
-  let arr1 = shuffleArr(numbers1);
-  let arr2 = shuffleArr(numbers2);
-  let arr3 = shuffleArr(numbers3);
-  let arr4 = shuffleArr(numbers4);
-  let arr5 = shuffleArr(numbers5);
-  let arr6 = shuffleArr(numbers6);
+  let arr1 = shuffleArr(numbers3);
+  let arr2 = shuffleArr(numbers4);
+  let arr3 = shuffleArr(numbers3_1);
+  let arr4 = shuffleArr(numbers4_1);
+  let arr5 = shuffleArr(numbers3_2);
+  let arr6 = shuffleArr(numbers4_2);
+  let arr7 = shuffleArr(numbers3_3);
+  let arr8 = shuffleArr(numbers4_3);
+  let arr9 = shuffleArr(numbers3_4);
+  let arr10 = shuffleArr(numbers4_4);
+  let arr11 = shuffleArr(numbers3_5);
+  let arr12 = shuffleArr(numbers4_5);
 
-  let arr61 = shuffleArr(numbers61);
-  let arr62 = shuffleArr(numbers62);
-  let arr63 = shuffleArr(numbers63);
-  let arr64 = shuffleArr(numbers64);
-  let arr65 = shuffleArr(numbers65);
-  let arr66 = shuffleArr(numbers66);
-  let arr67 = shuffleArr(numbers67);
-  let arr68 = shuffleArr(numbers68);
+  let arr1_1 = shuffleArr(numbers1);
+  let arr2_1 = shuffleArr(numbers2);
+  let arr3_1 = shuffleArr(numbers1_1);
+  let arr4_1 = shuffleArr(numbers2_1);
+  let arr5_1 = shuffleArr(numbers1_2);
+  let arr6_1 = shuffleArr(numbers2_2);
+  let arr7_1 = shuffleArr(numbers1_3);
+  let arr8_1 = shuffleArr(numbers2_3);
+  let arr9_1 = shuffleArr(numbers1_4);
+  let arr10_1 = shuffleArr(numbers2_4);
+  let arr11_1 = shuffleArr(numbers1_5);
+  let arr12_1 = shuffleArr(numbers2_5);
 
+  let lotteryNumbers = [0, 1];
+  let numForRandom = shuffleArr(lotteryNumbers)[0];
+  console.log(numForRandom);
+  if (numForRandom == 0) {
 
-  randomArrays.push(arr1, arr2, arr3, arr4, arr5, arr6);
-  // console.log(randomArrays);
-  for (let i = 0; i < 6; i++) {
-    for (let j = 0; j < 8; j++) {
-      animalsArray.push(petsDescription[randomArrays[i][j]])
-    }
+    randomArrays.push(arr1, arr2, arr3, arr4, arr5, arr6, arr7, arr8, arr9, arr10, arr11, arr12);
+  } else if (numForRandom == 1) {
+    randomArrays.push(arr1_1, arr2_1, arr3_1, arr4_1, arr5_1, arr6_1, arr7_1, arr8_1, arr9_1, arr10_1, arr11_1, arr12_1)
+  }
+  console.log(randomArrays.flat());
+  for (let i = 0; i < 48; i++) {
+    animalsArray.push(petsDescription[randomArrays.flat()[i]])
   };
 
-  // if (window.innerWidth < 1270 && window.innerWidth >= 640) {
-  //   randomArrays.push(arr61, arr62, arr63, arr64, arr65, arr66, arr67, arr68)
-  // }
   return animalsArray
 }
-const animals = makeRandomArrays()
+const animals = makeRandomArrays();
 console.log(animals);
 
+
 function slice(array) {
-  // 
+
   const chunkSize = 8;
   let r = [];
   for (let i = 0; i < array.length; i += chunkSize) {
@@ -113,33 +138,16 @@ function slice(array) {
   }
   return r;
 }
-let animals2D = slice(animals)
-// console.log(slice(animals));
-
+const animals2D = slice(animals);
+// console.log(animals2D);
 
 
 // APPEND PAGES 
 let cardNumber;
-let pageNumber;
+
 
 function appendSliderPages() {
-  // if (window.innerWidth >= 1271) {
-  pageNumber = 6;
   cardNumber = 48;
-  // }
-  // if (window.innerWidth < 1270 && window.innerWidth >= 640) {
-  //   pageNumber = 8;
-  //   cardNumber = 6;
-  // }
-  // if (window.innerWidth < 640) {
-  //   pageNumber = 16;
-  //   cardNumber = 3;
-  // }
-
-  // for (let i = 0; i < pageNumber; i++) {
-  // const sliderPage = document.createElement('div');
-  // sliderPage.className = "slider-page";
-  // slider.append(sliderPage);
   for (let j = 0; j < cardNumber; j++) {
     const sliderCard = document.createElement('div');
     sliderCard.className = "slider-card";
@@ -259,7 +267,6 @@ function defineSliderStep() {
     position = 307.5 * i;
     page = 15;
   }
-  // console.log(position);
   return position
 }
 window.addEventListener('resize', defineSliderStep)
@@ -297,7 +304,6 @@ nextPageButton.addEventListener('click', function () {
 
 function previousPage() {
   i--;
-  console.log(i);
   currentPage.innerHTML = i + 1;
   defineSliderStep();
   slider.style.transform = 'translate(' + -position + 'px';
@@ -380,7 +386,6 @@ function firstPage() {
 
 firstPageButton.addEventListener('click', function () {
   firstPage()
-  console.log(i);
 });
 
 
